@@ -1,0 +1,243 @@
+﻿doctype html
+html
+	head
+		meta(charset='utf-8')
+		title Template
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='format-detection', content='telephone=no')
+		link(rel='stylesheet', media='all', href='css/screen.css')
+	body
+		//- wrapper
+		.wrapper
+			header.header
+				.header__center.center
+					a.header__logo omaze
+					.nav
+						button.nav__btn menu
+						.nav__list
+							a.nav__link(href="#") Nav
+			//- center
+			.center
+				//- author
+				.author
+					.author__ava
+						img.author__ava-el(src="http://placehold.it/55x55", alt="")
+					.author__info
+						.author__name Arnold Schwarzenegger’s
+						.author__title Official Selfie Stick T-shirt
+				//- price
+				.price 18$
+				//- slider
+				.slider.js-slider
+					.slider__item
+						img.slider__item-pic(src="http://placehold.it/360x290", alt="")
+						.slider__label
+							i.icon.icon-makes-an-impact-1
+				//- product
+				.product
+					.product__type EVERY SHIRT SOLD BENEFITS
+					.product__title After-School All-Stars
+					//- content
+					.product__content.content
+						p “The design of this T-shirt is inspired by a video we created to promote my “Blow Sh** Up” campaign. This was launched to raise money for a cause very close to my heart.”
+					//- option
+					.option
+						.option__title STYLE
+						//- field
+						.field
+							.field__wrap
+								//- select
+								.select
+									.select__head Men’s T-Shirt - $18
+									select.select__el
+										option Men’s T-Shirt - $18
+										option Men’s T-Shirt - $18
+										option Men’s T-Shirt - $18
+					//- option
+					.option
+						.option__title COLOR
+							span.option__selected - Heather Grey
+						.option__list
+							label.option__item
+								input.option__input(type="radio", name="opt1", checked)
+								span.option__var 
+									img.option__pic(src="http://placehold.it/52x52", alt="")
+							label.option__item
+								input.option__input(type="radio", name="opt1")
+								span.option__var 
+									img.option__pic(src="http://placehold.it/52x52", alt="")
+					//- option
+					.option
+						.option__title size
+							span.option__selected - Large
+						.option__list
+							label.option__item
+								input.option__input(type="radio", name="opt2", checked)
+								span.option__var 
+									span.option__size S
+							label.option__item
+								input.option__input(type="radio", name="opt2",)
+								span.option__var 
+									span.option__size M
+							label.option__item
+								input.option__input(type="radio", name="opt2",)
+								span.option__var 
+									span.option__size L
+							label.option__item
+								input.option__input(type="radio", name="opt2",)
+								span.option__var 
+									span.option__size XL
+							label.option__item
+								input.option__input(type="radio", name="opt2",)
+								span.option__var 
+									span.option__size XXL
+
+					a.link(href="#") Show sizing chart and product details
+
+					button.btn BUY IT NOW
+
+					.msg Items ship 2 weeks after campaign closes
+
+					.tabs
+						.tabs__container
+							.tabs__item
+								.tabs__title About This Item
+
+								//- content
+								.content
+									p The design of this T-shirt is inspired by a video we created with Arnold Schwarzenegger to promote his “Blow Sh** Up” campaign. This campaign was launched to raise money for After-School All-Stars, whose amazing initiative is very close to Arnold’s heart.
+									img(src="http://placehold.it/320x180", alt="")
+
+							.tabs__item
+								.tabs__title Shipping
+
+								//- links
+								.links
+									a.links__item.is-active United States
+									a.links__item Canada
+									a.links__item International
+
+								//- content
+								.content
+									h3 Sample Header
+									p Once a campaign ends, we begin the printing process.  This takes about a week.  From there, all domestic orders take approximately one (1) week to ship. Your order will always arrive approximately two (2) weeks after the campaign has ended.
+									table
+										thead
+											tr
+												th Style
+												th 1st Item
+												th Each Add’l
+										tbody
+											tr
+												td T-shirt
+												td $4.00
+												td $2.00
+											tr
+												td T-shirt
+												td $4.00
+												td $2.00
+											tr
+												td T-shirt
+												td $4.00
+												td $2.00
+											tr
+												td T-shirt
+												td $4.00
+												td $2.00
+							.tabs__item
+								.tabs__title Frequently Asked Questions
+
+								//- content
+								.content
+									h4 Can I exchange or return my item?   
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+									h4 How do I calculate the Shipping & Handling charge for my order? 
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+									h4 Does Omaze Made ship outside the U.S.?
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+									h4 How do I choose my T-shirt size?
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+					//- counter
+					.counter
+						.counter__item
+							.counter__value 2
+							.counter__type days
+						.counter__dots :
+						.counter__item
+							.counter__value 16
+							.counter__type hrs
+						.counter__dots :
+						.counter__item
+							.counter__value 24
+							.counter__type mins
+						.counter__dots :
+						.counter__item
+							.counter__value 15
+							.counter__type secs
+					
+					//- progress
+					.progress
+						.progress__el
+							.progress__range(style="width: 60%;")
+						.progress__wrap
+							.progress__info
+								.progress__val 65%
+								.progress__type funded
+							.progress__info
+								.progress__val 650
+								.progress__type sold
+							.progress__info
+								.progress__val 1000
+								.progress__type goal
+
+					//- info
+					.info 
+						.info__icon
+							i.icon.icon-info
+						.info__wrap You will only be charged if this campaign reaches its goal.
+					
+					//- share
+					.share
+						.share__title Share This Campaign
+						.share__list
+							button.share__btn
+								i.icon.icon-twitter
+							button.share__btn
+								i.icon.icon-facebook
+							button.share__btn
+								i.icon.icon-instagram
+							button.share__btn
+								i.icon.icon-pinterest
+							button.share__btn
+								i.icon.icon-email
+
+					//- similar
+					.similar
+						.similar__title
+						.similar__list
+							.similar__item
+								//- item
+								.item
+									.item__wrap
+										.item__price 18$
+										.item__pic
+											img.item__pic-el(src="http://placehold.it/290x240", alt="")
+										.item__head
+											.item__author Robert Downey Jr.
+											.item__title Official Iron Man T-shirt
+									.item__progress
+										.item__progress-el
+											.item__progress-range(style="width: 60%;")
+										.item__progress-wrap
+											.item__progress-nfo
+												.item__progress-val 65%
+												.item__progress-type funded
+											.item__progress-info
+												.item__progress-val 18 days
+												.item__progress-type left
+
+
+
+		//- scripts
+		script(src='js/lib/head.js', data-headjs-load='js/init.js')

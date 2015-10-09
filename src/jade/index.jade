@@ -1,8 +1,14 @@
-extends _layout
-
-block title
-  title Title of template
-
-block content
-  .out
-      +icon("octa")
+﻿doctype html
+html
+	head
+		meta(charset='utf-8')
+		title Template
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='format-detection', content='telephone=no')
+		link(rel='stylesheet', media='all', href='css/screen.css')
+	body
+		//- wrapper
+		.wrapper(style="padding: 50px;")
+			div
+				a(href="/main-page.html", target="_blank") main-page.html
+				

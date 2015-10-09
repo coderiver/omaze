@@ -1,57 +1,179 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
 // ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
+//	 @for $i from 1 through 3
+//	   .item-#{$i}
 //			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
+//	 @each $s in a,b,c
+// 			#{$s}
 //				display: none
-// ## fonts
+
+// ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)
+// +font(book, cytiapro-black-webfont)  
 // =book
 // 	font-family: "book", Arial, sans-serif
-// insert pics into css
-// div
-// 	+pic("blabla.png")
-// span
-// 	+png(blabla)
-// p
-// 	+jpg(bla)
 
+$blue: #2BC1D6
+$pink: #EE4288
+$gray: #D9DADB
+$gray-light: #F1F2F2
+$gray-dark: #939598
+$black: #231F20
+
++font(Nevis, Nevis-Bold)  
+=nevis
+	font-family: "Nevis", Arial, sans-serif
++font(National-Regular, National-Regular)  
+=regular
+	font-family: "National-Regular", Arial, sans-serif
++font(National-Medium, National-Medium)  
+=medium
+	font-family: "National-Medium", Arial, sans-serif
++font(National-Bold, National-Bold)  
+=semibold
+	font-family: "National-Semibold", Arial, sans-serif
++font(National-Bold, National-Bold)  
+=bold
+	font-family: "National-Bold", Arial, sans-serif
++font(National-Extrabold, National-Extrabold)  
+=extrabold
+	font-family: "National-Extrabold", Arial, sans-serif
++font(National-Light, National-Light)  
+=light
+	font-family: "National-Light", Arial, sans-serif
++font(National-LightItalic, National-LightItalic)  
+=lightItalic
+	font-family: "National-LightItalic", Arial, sans-serif
++font(National-Semibold, National-Semibold)
 
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
-	line-height: 1.4
+	+light
+	font-size: 15px
+	line-height: 1.3
+	color: $black 
+button
+	background: none
+a
+	text-decoration: none
+	
+.wrapper
+	width: 360px
+	margin: 0 auto
+
+.center
+	max-width: 1066px
+	margin: 0 auto
+	padding: 0 20px
+
+.header
+	min-height: 68px
+	margin-bottom: 30px
+	padding-bottom: 10px
+	border-bottom: 1px solid #D9DADB
+	&__center
+		+clr
+	&__logo
+		float: left
+		margin-top: 20px
+		+nevis
+		font-size: 27px
+		letter-spacing: -2px
+
+.nav
+	float: right
+	margin-top: 30px
+	&__btn
+		height: 22px
+		padding: 0 5px
+		border: 1px solid
+		font-size: 16px
+		text-transform: uppercase
+	&__list
+		display: none
+
+.author
+	margin-bottom: 10px
+	+clr
+	&__ava
+		float: left
+		width: 55px
+		margin-right: 10px
+		&-el
+			display: block
+			max-width: 100%
+			border-radius: 50%
+	&__info
+		display: table
+	&__name
+		+lightItalic
+		font-size: 16px
+		color: $gray-dark
+	&__title
+		+extrabold
+		font-size: 22px
+		
+.price
+	margin-bottom: 20px
+	font-size: 35px
+	color: $gray-dark 
+	text-align: center
+	text-transform: uppercase
+
+.slider
+	margin: 0 -20px 20px
+	&__item
+		position: relative
+	&__label
+		position: absolute
+		top: 10px
+		left: 20px
+		color: $blue 
+		.icon
+			font-size: 94px
+
+.product
+	margin-bottom: 30px
+	&__type,
+	&__title
+		text-align: center
+	&__type
+		font-size: 16px
+	&__title
+		margin-bottom: 20px
+		+extrabold
+		font-size: 28px
+
+.option
+	&__title
+		margin-bottom: 10px
+		+bold
+		font-size: 18px
+		
+.select
+	&__head
+		height: 42px
+		border: 1px solid #cccdd0
+		border-radius: 2px
+		position: relative
 
 
-// common blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

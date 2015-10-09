@@ -1,25 +1,29 @@
 {
-  "name": "Coderiver-Project",
-  "version": "0.1.0",
-  "description": "Riverco.de gulp template",
-  "author": "Coderiver <html@coderiver.com.ua>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/coderiver/gulp"
-  },
-  "devDependencies": {
-    "autoprefixer": "~6.0.3",
-    "browser-sync": "~2.9.3",
-    "gulp": "~3.9.0",
-    "gulp-consolidate": "^0.1.2",
-    "gulp-copy": "0.0.2",
-    "gulp-iconfont": "^5.0.0",
-    "gulp-postcss": "~6.0.0",
-    "gulp-rigger": "^0.5.8",
-    "gulp-ruby-sass": "~2.0.3",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp.spritesmith": "^4.1.0",
-    "lodash": "^3.10.1",
-    "rimraf": "^2.4.3"
-  }
+	"name": "gulp",
+	"version": "0.0.1",
+	"description": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/arturmoroz/gulp"
+	},
+	"author": "Artur Moroz",
+	"license": "ISC",
+	"homepage": "https://arturmoroz.com",
+	"devDependencies": {
+		"autoprefixer": "*",
+		"browser-sync": "*",
+		"gulp": "*",
+		"gulp-postcss": "*",
+		"gulp-sass": "*",
+		"gulp-sourcemaps": "*",
+		"gulp-consolidate": "*",
+		"gulp-iconfont": "*",
+		"gulp-svgmin": "*",
+		"gulp-jade": "*",
+		"lodash": "*"
+	},
+	"dependencies": {}
 }

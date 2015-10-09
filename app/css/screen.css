@@ -1,0 +1,396 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+body, html {
+  height: 100%; }
+
+img, fieldset, a img {
+  border: none; }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none; }
+
+input[type="submit"],
+button {
+  cursor: pointer; }
+  input[type="submit"]::-moz-focus-inner,
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+
+textarea {
+  overflow: auto; }
+
+input, button {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+div, input, textarea, select, button,
+h1, h2, h3, h4, h5, h6, a, span, a:focus {
+  outline: none; }
+
+ul, ol {
+  list-style-type: none; }
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+html {
+  box-sizing: border-box; }
+
+* {
+  box-sizing: border-box; }
+  *:before,
+  *:after {
+    box-sizing: border-box; }
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../fonts/iconfont.eot");
+  src: url("../fonts/iconfont.eot?#iefix") format("eot"), url("../fonts/iconfont.woff") format("woff"), url("../fonts/iconfont.woff2") format("woff2"), url("../fonts/iconfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.icon {
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: auto;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon {
+  display: inline-block; }
+
+.icon-about:before {
+  content: ""; }
+
+.icon-arrow-back-sm:before {
+  content: ""; }
+
+.icon-arrow-back:before {
+  content: ""; }
+
+.icon-arrow-left:before {
+  content: ""; }
+
+.icon-arrow-right:before {
+  content: ""; }
+
+.icon-email:before {
+  content: ""; }
+
+.icon-facebook:before {
+  content: ""; }
+
+.icon-faq:before {
+  content: ""; }
+
+.icon-how-donate:before {
+  content: ""; }
+
+.icon-how-find:before {
+  content: ""; }
+
+.icon-how-rock:before {
+  content: ""; }
+
+.icon-how-share:before {
+  content: ""; }
+
+.icon-info:before {
+  content: ""; }
+
+.icon-instagram:before {
+  content: ""; }
+
+.icon-lock:before {
+  content: ""; }
+
+.icon-makes-an-impact-1:before {
+  content: ""; }
+
+.icon-makes-an-impact-2:before {
+  content: ""; }
+
+.icon-makes-an-impact-3:before {
+  content: ""; }
+
+.icon-makes-an-impact-4:before {
+  content: ""; }
+
+.icon-pinterest:before {
+  content: ""; }
+
+.icon-shipping:before {
+  content: ""; }
+
+.icon-twitter:before {
+  content: ""; }
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  .slick-track:before,
+  .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+@font-face {
+  font-family: Nevis;
+  src: url("../fonts/Nevis-Bold.eot");
+  src: url("../fonts/Nevis-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Nevis-Bold.woff2") format("woff2"), url("../fonts/Nevis-Bold.woff") format("woff"), url("../fonts/Nevis-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: National-Regular;
+  src: url("../fonts/National-Regular.eot");
+  src: url("../fonts/National-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Regular.woff2") format("woff2"), url("../fonts/National-Regular.woff") format("woff"), url("../fonts/National-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: National-Medium;
+  src: url("../fonts/National-Medium.eot");
+  src: url("../fonts/National-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Medium.woff2") format("woff2"), url("../fonts/National-Medium.woff") format("woff"), url("../fonts/National-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: National-Bold;
+  src: url("../fonts/National-Bold.eot");
+  src: url("../fonts/National-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Bold.woff2") format("woff2"), url("../fonts/National-Bold.woff") format("woff"), url("../fonts/National-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: National-Bold;
+  src: url("../fonts/National-Bold.eot");
+  src: url("../fonts/National-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Bold.woff2") format("woff2"), url("../fonts/National-Bold.woff") format("woff"), url("../fonts/National-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: National-Extrabold;
+  src: url("../fonts/National-Extrabold.eot");
+  src: url("../fonts/National-Extrabold.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Extrabold.woff2") format("woff2"), url("../fonts/National-Extrabold.woff") format("woff"), url("../fonts/National-Extrabold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: National-Light;
+  src: url("../fonts/National-Light.eot");
+  src: url("../fonts/National-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Light.woff2") format("woff2"), url("../fonts/National-Light.woff") format("woff"), url("../fonts/National-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: National-LightItalic;
+  src: url("../fonts/National-LightItalic.eot");
+  src: url("../fonts/National-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/National-LightItalic.woff2") format("woff2"), url("../fonts/National-LightItalic.woff") format("woff"), url("../fonts/National-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: National-Semibold;
+  src: url("../fonts/National-Semibold.eot");
+  src: url("../fonts/National-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/National-Semibold.woff2") format("woff2"), url("../fonts/National-Semibold.woff") format("woff"), url("../fonts/National-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: "National-Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #231F20; }
+
+button {
+  background: none; }
+
+a {
+  text-decoration: none; }
+
+.wrapper {
+  width: 360px;
+  margin: 0 auto; }
+
+.center {
+  max-width: 1066px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.header {
+  min-height: 68px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #D9DADB; }
+  .header__center {
+    *zoom: 1; }
+    .header__center:after {
+      content: " ";
+      display: table;
+      clear: both; }
+  .header__logo {
+    float: left;
+    margin-top: 20px;
+    font-family: "Nevis", Arial, sans-serif;
+    font-size: 27px;
+    letter-spacing: -2px; }
+
+.nav {
+  float: right;
+  margin-top: 30px; }
+  .nav__btn {
+    height: 22px;
+    padding: 0 5px;
+    border: 1px solid;
+    font-size: 16px;
+    text-transform: uppercase; }
+  .nav__list {
+    display: none; }
+
+.author {
+  margin-bottom: 10px;
+  *zoom: 1; }
+  .author:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .author__ava {
+    float: left;
+    width: 55px;
+    margin-right: 10px; }
+    .author__ava-el {
+      display: block;
+      max-width: 100%;
+      border-radius: 50%; }
+  .author__info {
+    display: table; }
+  .author__name {
+    font-family: "National-LightItalic", Arial, sans-serif;
+    font-size: 16px;
+    color: #939598; }
+  .author__title {
+    font-family: "National-Extrabold", Arial, sans-serif;
+    font-size: 22px; }
+
+.price {
+  margin-bottom: 20px;
+  font-size: 35px;
+  color: #939598;
+  text-align: center;
+  text-transform: uppercase; }
+
+.slider {
+  margin: 0 -20px 20px; }
+  .slider__item {
+    position: relative; }
+  .slider__label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #2BC1D6; }
+    .slider__label .icon {
+      font-size: 94px; }
+
+.product {
+  margin-bottom: 30px; }
+  .product__type,
+  .product__title {
+    text-align: center; }
+  .product__type {
+    font-size: 16px; }
+  .product__title {
+    margin-bottom: 20px;
+    font-family: "National-Extrabold", Arial, sans-serif;
+    font-size: 28px; }
+
+.option__title {
+  font-family: "National-Bold", Arial, sans-serif;
+  font-size: 18px; }
+
+/*# sourceMappingURL=screen.css.map */
