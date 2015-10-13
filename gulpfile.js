@@ -33,6 +33,7 @@ gulp.task('iconfont', function(){
 		.pipe(svgmin())
 		.pipe(iconfont({
 			fontName: 'iconfont',
+			appendUnicode: true,
 			formats: ['ttf', 'eot', 'woff', 'woff2'],
 			timestamp: runTimestamp,
 			normalize: true,

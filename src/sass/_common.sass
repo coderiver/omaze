@@ -18,6 +18,8 @@ $gray: #D9DADB
 $gray-light: #F1F2F2
 $gray-dark: #939598
 $black: #231F20
+$border: #cccdd0
+$border-light: #f1f2f3
 
 +font(Nevis, Nevis-Bold)  
 =nevis
@@ -41,42 +43,79 @@ $black: #231F20
 =light
 	font-family: "National-Light", Arial, sans-serif
 +font(National-LightItalic, National-LightItalic)  
-=lightItalic
+=lightitalic
 	font-family: "National-LightItalic", Arial, sans-serif
 +font(National-Semibold, National-Semibold)
+
+=fonticon
+	font-family: "iconfont"
+	font-style: normal
+	font-weight: normal
+	text-rendering: auto
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 
 body
 	+light
 	font-size: 15px
 	line-height: 1.3
-	color: $black 
+	color: $black
+	+rm(719)
+		font-size: 18px
 button
 	background: none
 a
-	text-decoration: none
+	color: $blue
+	&:hover
+		text-decoration: none
 	
 .wrapper
-	width: 360px
 	margin: 0 auto
+	padding-bottom: 50px
 
 .center
 	max-width: 1066px
 	margin: 0 auto
 	padding: 0 20px
+	+rm(719)
+		padding: 0 35px
+
+.layout
+	+clr
+
+.section
+	+rm(767)
+		float: left
+		width: 52%
+
+.aside
+	+rm(767)
+		float: right
+		width: 38%
 
 .header
 	min-height: 68px
 	margin-bottom: 30px
-	padding-bottom: 10px
+	padding-bottom: 5px
 	border-bottom: 1px solid #D9DADB
+	+rm(719)
+		margin-bottom: 70px
+		padding-bottom: 8px
 	&__center
 		+clr
 	&__logo
 		float: left
-		margin-top: 20px
+		margin-top: 25px
 		+nevis
 		font-size: 27px
+		color: $black 
 		letter-spacing: -2px
+		text-decoration: none
+		+rm(719)
+			margin-top: 21px
+			font-size: 31px
 
 .nav
 	float: right
@@ -85,31 +124,49 @@ a
 		height: 22px
 		padding: 0 5px
 		border: 1px solid
+		+light
 		font-size: 16px
 		text-transform: uppercase
+		letter-spacing: 2px
+		+rm(719)
+			height: 26px
+			font-size: 21px
 	&__list
 		display: none
 
 .author
-	margin-bottom: 10px
+	margin-bottom: 5px
 	+clr
+	+rm(719)
+		margin-bottom: 15px
+		padding-bottom: 13px
+		border-bottom: 1px solid $border-light
 	&__ava
 		float: left
-		width: 55px
+		width: 46px
 		margin-right: 10px
+		+rm(719)
+			margin-right: 20px
+			width: 54px
 		&-el
 			display: block
 			max-width: 100%
 			border-radius: 50%
 	&__info
 		display: table
+		+rm(719)
+			line-height: 1.1
 	&__name
-		+lightItalic
-		font-size: 16px
+		+lightitalic
+		font-size: 18px
 		color: $gray-dark
+		+rm(719)
+			font-size: 24px
 	&__title
 		+extrabold
 		font-size: 22px
+		+rm(719)
+			font-size: 30px
 		
 .price
 	margin-bottom: 20px
@@ -117,57 +174,555 @@ a
 	color: $gray-dark 
 	text-align: center
 	text-transform: uppercase
+	line-height: 1
+	+rm(719)
+		margin-bottom: 40px
 
 .slider
+	position: relative
 	margin: 0 -20px 20px
+	+rm(719)
+		margin: 0 -35px 40px
+	+rm(767)
+		margin: 0 0 40px
+	&__list
+		padding-bottom: 20px
+		font-size: 0
+		text-align: center
+		+rm(719)
+			padding-bottom: 30px
+		.slick-prev
+			left: 10px
+		.slick-next
+			right: 10px
 	&__item
 		position: relative
+	&__item-pic
+		display: inline-block
+		max-width: 100%
+		vertical-align: top
 	&__label
 		position: absolute
 		top: 10px
 		left: 20px
-		color: $blue 
+		color: $blue
+		+rm(719)
+			left: 35px
 		.icon
 			font-size: 94px
+			+rm(719)
+				font-size: 140px
+	&__previews
+		display: none
+		max-width: 476px
+		margin: 0 auto
+		font-size: 0
+		+rm(719)
+			display: block
+		&-item
+			width: 68px
+			text-align: center
+		&-img
+			max-width: 58px
+			max-height: 58px
+			border: 1px solid $border
+		.slick-prev
+			left: -25px
+		.slick-next
+			right: -25px
+	.slick-prev,
+	.slick-next
+		position: absolute
+		top: 50%
+		margin-top: -20px
+		padding: 10px
+		font-size: 0
+		color: $gray 
+		z-index: 2
+		&:before
+			+fonticon
+			font-size: 20px 
+	.slick-prev
+		&:before
+			content: "\EA04"
+	.slick-next
+		&:before
+			content: "\EA05"
+	.slick-dots
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		text-align: center
+		font-size: 0
+		li
+			display: inline-block
+			padding: 0 3px
+			vertical-align: top
+			&.slick-active
+				button
+					background: $pink 
+		button
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background: $gray
+			font-size: 0
 
 .product
 	margin-bottom: 30px
+	+rm(719)
+		margin-bottom: 55px
 	&__type,
 	&__title
 		text-align: center
 	&__type
 		font-size: 16px
+		letter-spacing: 3px 
 	&__title
 		margin-bottom: 20px
 		+extrabold
 		font-size: 28px
+		+rm(719)
+			margin-bottom: 35px
+	&__options
+		margin-bottom: 30px
+	&__msg
+		+lightitalic
+		text-align: center
+	&__link
+		display: inline-block
+		margin-bottom: 35px
+		font-size: 16px
+	&__btn
+		width: 100%
+		margin-bottom: 7px
 
 .option
+	margin-bottom: 20px
+	user-select: none 
 	&__title
 		margin-bottom: 10px
 		+bold
 		font-size: 18px
+		text-transform: uppercase
+	&__selected
+		margin-left: 5px
+		+light
+		text-transform: none
+	&__list
+		margin: 0 -10px -10px 0
+		font-size: 0
+	&__item
+		display: inline-block
+		position: relative
+		margin: 0 10px 10px 0
+		vertical-align: top
+		cursor: pointer
+	&__input
+		display: none
+	&__input:checked + &__var
+		&:before
+			display: block
+	&__var
+		display: block
+		position: relative
+		&:before
+			content: ""
+			display: none
+			position: absolute
+			top: -1px
+			left: -1px
+			width: 56px
+			height: 56px
+			border: 3px solid $blue
+			border-radius: 50%
+			z-index: 2 
+	&__pic
+		width: 54px
+		height: 54px
+		border-radius: 50%
+	&__size
+		display: block
+		width: 54px
+		height: 54px
+		border-radius: 50%
+		border: 1px solid $border
+		background: linear-gradient(#f0f0f1, #e3e4e5)
+		text-align: center
+		line-height: 52px
+		font-size: 22px 
 		
 .select
+	position: relative
 	&__head
-		height: 42px
-		border: 1px solid #cccdd0
-		border-radius: 2px
 		position: relative
+		height: 42px
+		padding: 0 34px 0 12px
+		border: 1px solid $border
+		background: linear-gradient(#fff, #e1e2e3)
+		border-radius: 2px
+		font-size: 18px
+		white-space: nowrap
+		text-overflow: ellipsis
+		line-height: 40px
+		overflow: hidden
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+		&:before
+			top: 0
+			right: 0
+			width: 26px
+			height: 40px
+			border-left: 1px solid $border
+			border-left: 0 2px 2px 0
+			background: linear-gradient(to left, #fafafa, #e2e3e4)
+		&:after
+			top: 12px
+			right: 8px
+			+arr(9,9,#fff,br)
+			box-shadow: 1px 1px 0 $border
+			transform: rotate(45deg)
+	&__el
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0 
+		border: none
+		cursor: pointer
+
+.btn
+	height: 56px
+	padding: 0 20px
+	background: $pink
+	border-radius: 4px
+	+light
+	font-size: 24px
+	color: #fff 
+	letter-spacing: 2px 
+
+.tabs
+	&__title
+		margin: 0 -20px 20px
+		padding: 2px 20px
+		background: $blue
+		+extrabold
+		font-size: 24px
+		text-align: center
+		color: #fff
+		+rm(719)
+			margin: 0 -35px 50px
+			padding: 10px 35px
+		+rm(767)
+			display: none
 
 
+.content
+	margin-bottom: 30px
+	line-height: 1.4
+	+rm(719)
+		margin-bottom: 50px
+		line-height: 1.8
+	h1,
+	h2,
+	h3,
+	h3,
+	h4,
+	h5,
+	h6
+		+medium
+		font-weight: 400 
+	h4
+		font-size: 18px
+		+rm(719)
+			margin-bottom: 20px
+			font-size: 24px
+	h6
+		font-size: 15px
+		color: $blue
+		+rm(719)
+			font-size: 18px
+	p
+		margin-bottom: 20px
+		+rm(719)
+			margin-bottom: 40px
+	img
+		max-width: 100%
+	table
+		max-width: 490px
+		margin: 0 auto
+		th,
+		td
+			padding: 15px 10px
+			border: 1px solid $border
+			text-align: center
+		th
+			+semibold
 
+.counter
+	margin-bottom: 35px
+	font-size: 0
+	text-align: center
+	+rm(719)
+		margin-bottom: 55px
+	&__item,
+	&__dots
+		display: inline-block
+		vertical-align: top
+	&__item
+		width: 54px
+		+rm(719)
+			width: 64px
+	&__value,
+	&__dots
+		+extrabold
+		font-size: 27px
+		line-height: 1
+		+rm(719)
+			font-size: 33px
+	&__type
+		font-size: 18px
+		+rm(719)
+			padding-top: 5px
+			font-size: 20px
 
+.progress
+	margin-bottom: 45px
+	+rm(719)
+		margin-bottom: 30px
+	&__el
+		height: 14px
+		margin-bottom: 20px
+		border-radius: 7px
+		background: $gray
+		overflow: hidden
+	&__range
+		height: 14px
+		background: linear-gradient(#f05394, #f05394 50%, $pink 50%, $pink)
+		border-radius: 7px 0 0 7px
+	&__wrap
+		position: relative
+		max-width: 400px
+		margin: 0 auto
+		border: 1px solid $border
+		table-layout: fixed
+		font-size: 0
+		&:before
+			content: ""
+			position: absolute
+			top: -7px
+			left: 50%
+			margin-left: -10px
+			box-shadow: 1px -1px 0 $border
+			transform: rotate(-45deg)
+			+arr(14,14,#fff,tr)
+	&__info	
+		display: inline-block
+		width: 33.33%
+		padding: 10px 12px
+		text-align: center
+		vertical-align: top
+		line-height: 1.1
+		&:first-child
+			text-align: left
+		&:last-child
+			text-align: right
+		&-wrap
+			display: inline-block
+			text-align: center
+			vertical-align: top
+	&__val
+		+extrabold
+		font-size: 27px
+	&__type
+		font-size: 18px
 
+.info
+	display: table
+	position: relative
+	margin: 0 auto 30px
+	padding-left: 20px
+	color: $gray-dark 
+	+rm(719)
+		margin-bottom: 60px
+		padding-left: 25px
+	&__icon
+		position: absolute
+		top: 3px
+		left: 0
+		font-size: 0
+		.icon
+			font-size: 13px
+			+rm(719)
+				font-size: 17px 
 
+.share
+	margin-bottom: 25px
+	text-align: center
+	font-size: 0
+	+rm(719)
+		margin-bottom: 80px
+	&__title
+		position: relative
+		margin-bottom: 25px
+		+extrabold
+		font-size: 24px
+		letter-spacing: -1px
+		+rm(719)
+			margin-bottom: 40px
+			padding-bottom: 20px
+			+light
+			font-size: 22px
+			text-transform: uppercase
+			letter-spacing: 4px
+			&:before
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 50%
+				width: 220px
+				margin-left: -110px
+				height: 1px
+				background: $border-light  
+	&__btn
+		width: 38px
+		height: 38px
+		margin: 0 8px 10px
+		background: $black 
+		border-radius: 50%
+		font-size: 0
+		color: #FFF 
+		vertical-align: top
+		+rm(719)
+			width: 54px
+			height: 54px
+			margin: 0 10px 10px
+		.icon-twitter
+			font-size: 17px
+			+rm(719)
+				font-size: 24px 
+		.icon-facebook
+			font-size: 20px
+			+rm(719)
+				font-size: 27px
+		.icon-instagram
+			font-size: 18px
+			+rm(719)
+				font-size: 25px
+		.icon-pinterest
+			font-size: 21px
+			+rm(719)
+				font-size: 28px
+		.icon-email
+			font-size: 14px
+			+rm(719)
+				font-size: 21px
 
+.item
+	width: 276px
+	border: 1px solid $border
+	+rm(719)
+		width: 290px
+	&__wrap
+		position: relative
+	&__price
+		position: absolute
+		top: 15px
+		right: 15px
+		width: 40px
+		height: 40px
+		background: $black 
+		border-radius: 50%
+		font-size: 20px
+		line-height: 40px
+		text-align: center
+		color: #FFF
+		+rm(719)
+			top: 18px
+			right: 18px
+			width: 46px
+			height: 46px
+			font-size: 22px 
+	&__pic
+		display: block
+		max-width: 100%
+	&__head
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		padding: 4px 15px
+		background: rgba(#fff,.7)
+		text-align: center
+		line-height: 1.2
+	&__author
+		+lightitalic
+		font-size: 17px
+	&__title
+		+extrabold
+		font-size: 20px
+	&__progress
+		&-el
+			height: 14px
+			background: $gray
+		&-range
+			height: 14px
+			background: $pink
+		&-wrap
+			display: table
+			width: 100%
+			border-top: 1px solid $border
+		&-info
+			display: table-cell
+			width: 50%
+			padding: 7px
+			vertical-align: top
+			text-align: center
+			line-height: 1.1
+			&:nth-child(2)
+				border-left: 1px solid $border
+		&-val
+			+extrabold
+			font-size: 22px
+		&-type
+			font-size: 18px
+		 
+.similar
+	margin: 0 -20px
+	+rm(719)
+		margin: 0 -35px
+	&__title
+		margin-bottom: 20px
+		+extrabold
+		font-size: 24px
+		text-align: center
+		+rm(719)
+			margin-bottom: 30px
+			font-size: 38px
+	&__item
+		padding-left: 20px
+		+rm(719)
+			padding-left: 35px
 
-
-
-
-
-
-
+.shipping
+	&__nav
+		margin: 0 -20px 20px 0
+		+rm(719)
+			margin: 0 0 30px
+			text-align: center
+	&__link
+		display: inline-block
+		margin: 0 20px 10px 0
+		+medium
+		font-size: 18px
+		vertical-align: top
+		+rm(719)
+			margin: 0 25px 10px
+			font-size: 20px
 
 
 
