@@ -14,6 +14,7 @@
 
 $blue: #2BC1D6
 $pink: #EE4288
+$pink-light: #ef4f8d
 $gray: #D9DADB
 $gray-light: #F1F2F2
 $gray-dark: #939598
@@ -58,6 +59,7 @@ $border-light: #f1f2f3
 	-moz-osx-font-smoothing: grayscale
 
 body
+	min-width: 320px
 	+light
 	font-size: 15px
 	line-height: 1.3
@@ -84,6 +86,8 @@ a
 
 .layout
 	+clr
+	+rm(767)
+		margin-bottom: 60px
 
 .section
 	+rm(767)
@@ -93,7 +97,7 @@ a
 .aside
 	+rm(767)
 		float: right
-		width: 38%
+		width: 39%
 
 .header
 	min-height: 68px
@@ -120,6 +124,8 @@ a
 .nav
 	float: right
 	margin-top: 30px
+	+rm(767)
+		margin-top: 35px
 	&__btn
 		height: 22px
 		padding: 0 5px
@@ -131,8 +137,69 @@ a
 		+rm(719)
 			height: 26px
 			font-size: 21px
+		+rm(767)
+			display: none
 	&__list
 		display: none
+		float: right
+		+rm(767)
+			display: block
+	&__group
+		float: left
+		margin-left: 60px
+		&:first-child
+			margin: 0
+	&__link
+		float: left
+		margin-left: 20px
+		+regular
+		font-size: 16px
+		color: #000
+		text-decoration: none
+		&:first-child
+			margin: 0 
+
+.content
+	margin-bottom: 30px
+	line-height: 1.4
+	+rm(719)
+		margin-bottom: 50px
+		line-height: 1.8
+	h1,
+	h2,
+	h3,
+	h3,
+	h4,
+	h5,
+	h6
+		+medium
+		font-weight: 400 
+	h4
+		font-size: 18px
+		+rm(719)
+			margin-bottom: 20px
+			font-size: 24px
+	h6
+		font-size: 15px
+		color: $blue
+		+rm(719)
+			font-size: 18px
+	p
+		margin-bottom: 20px
+		+rm(719)
+			margin-bottom: 40px
+	img
+		max-width: 100%
+	table
+		max-width: 490px
+		margin: 0 auto
+		th,
+		td
+			padding: 15px 10px
+			border: 1px solid $border
+			text-align: center
+		th
+			+semibold
 
 .author
 	margin-bottom: 5px
@@ -141,6 +208,10 @@ a
 		margin-bottom: 15px
 		padding-bottom: 13px
 		border-bottom: 1px solid $border-light
+	+rm(767)
+		margin-bottom: 20px
+		padding-bottom: 0
+		border: none
 	&__ava
 		float: left
 		width: 46px
@@ -177,6 +248,14 @@ a
 	line-height: 1
 	+rm(719)
 		margin-bottom: 40px
+	+rm(767)
+		margin-bottom: 15px
+		padding: 10px 0 15px
+		border-bottom: 1px solid $border-light 
+		+extrabold
+		text-align: left
+		font-size: 30px
+		color: $black 
 
 .slider
 	position: relative
@@ -185,6 +264,8 @@ a
 		margin: 0 -35px 40px
 	+rm(767)
 		margin: 0 0 40px
+		padding-bottom: 40px
+		border-bottom: 1px solid $border-light 
 	&__list
 		padding-bottom: 20px
 		font-size: 0
@@ -276,6 +357,8 @@ a
 	&__type,
 	&__title
 		text-align: center
+		+rm(767)
+			text-align: left
 	&__type
 		font-size: 16px
 		letter-spacing: 3px 
@@ -284,7 +367,7 @@ a
 		+extrabold
 		font-size: 28px
 		+rm(719)
-			margin-bottom: 35px
+			margin-bottom: 30px
 	&__options
 		margin-bottom: 30px
 	&__msg
@@ -297,6 +380,11 @@ a
 	&__btn
 		width: 100%
 		margin-bottom: 7px
+	&__content
+		+rm(767)
+			margin-bottom: 20px
+			padding-bottom: 30px
+			border-bottom: 1px solid $border-light 
 
 .option
 	margin-bottom: 20px
@@ -403,9 +491,36 @@ a
 	+light
 	font-size: 24px
 	color: #fff 
-	letter-spacing: 2px 
+	letter-spacing: 2px
+	&:hover
+		background: $pink-light 
 
 .tabs
+	&__nav
+		display: none
+		margin-bottom: 25px
+		font-size: 0
+		+rm(767)
+			display: block
+	&__link
+		display: inline-block
+		margin-right: 40px
+		padding: 0 10px
+		vertical-align: top
+		text-decoration: none
+		text-align: center
+		&.is-active &-title
+			border-color: $blue
+		&-icon
+			margin-bottom: 7px
+			.icon
+				font-size: 30px
+		&-title
+			border-bottom: 4px solid transparent
+			+regular
+			font-size: 16px
+			text-transform: uppercase
+			color: #000
 	&__title
 		margin: 0 -20px 20px
 		padding: 2px 20px
@@ -418,50 +533,18 @@ a
 			margin: 0 -35px 50px
 			padding: 10px 35px
 		+rm(767)
+			margin: 0 0 30px
+			padding: 0
+			background: none
+			text-align: left
+			font-size: 26px
+			color: $black
+	&__item
+		+rm(767)
 			display: none
-
-
-.content
-	margin-bottom: 30px
-	line-height: 1.4
-	+rm(719)
-		margin-bottom: 50px
-		line-height: 1.8
-	h1,
-	h2,
-	h3,
-	h3,
-	h4,
-	h5,
-	h6
-		+medium
-		font-weight: 400 
-	h4
-		font-size: 18px
-		+rm(719)
-			margin-bottom: 20px
-			font-size: 24px
-	h6
-		font-size: 15px
-		color: $blue
-		+rm(719)
-			font-size: 18px
-	p
-		margin-bottom: 20px
-		+rm(719)
-			margin-bottom: 40px
-	img
-		max-width: 100%
-	table
-		max-width: 490px
-		margin: 0 auto
-		th,
-		td
-			padding: 15px 10px
-			border: 1px solid $border
-			text-align: center
-		th
-			+semibold
+		&.is-active
+			+rm(767)
+				display: block
 
 .counter
 	margin-bottom: 35px
@@ -511,6 +594,8 @@ a
 		border: 1px solid $border
 		table-layout: fixed
 		font-size: 0
+		+rm(767)
+			max-width: 320px
 		&:before
 			content: ""
 			position: absolute
@@ -693,6 +778,7 @@ a
 		 
 .similar
 	margin: 0 -20px
+	font-size: 0
 	+rm(719)
 		margin: 0 -35px
 	&__title
@@ -703,10 +789,15 @@ a
 		+rm(719)
 			margin-bottom: 30px
 			font-size: 38px
-	&__item
+	&__slide
 		padding-left: 20px
 		+rm(719)
 			padding-left: 35px
+		+rm(1023)
+			padding: 0
+	&__item
+		+rm(1023)
+			margin: 0 auto
 
 .shipping
 	&__nav

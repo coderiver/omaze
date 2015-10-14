@@ -24,7 +24,28 @@ head.ready(function() {
 			preview.slick({
 				asNavFor: '.js-slider-preview',
 				slidesToShow: 7,
-				swipe: false
+				swipe: false,
+				mobileFirst: true,
+				responsive: [
+					{
+						breakpoint: 719,
+						settings: {
+							slidesToShow: 5
+						}
+					},
+					{
+						breakpoint: 819,
+						settings: {
+							slidesToShow: 6
+						}
+					},
+					{
+						breakpoint: 1023,
+						settings: {
+							slidesToShow: 7
+						}
+					}
+				]
 			});
 		};
 	}());
@@ -37,7 +58,16 @@ head.ready(function() {
 				arrows: false,
 				slidesToShow: 2,
 				variableWidth: true,
-				mobileFirst: true
+				mobileFirst: true,
+				responsive: [
+					{
+						breakpoint: 1023,
+						settings: {
+							variableWidth: false,
+							slidesToShow: 3
+						}
+					}
+				]
 			});
 		};
 	}());

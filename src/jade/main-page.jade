@@ -15,7 +15,14 @@ html
 					.nav
 						button.nav__btn menu
 						.nav__list
-							a.nav__link(href="#") Nav
+							.nav__group
+								a.nav__link(href="#") Experiences
+								a.nav__link(href="#") Charities
+								a.nav__link(href="#") Blog
+							.nav__group
+								a.nav__link(href="#") Preferred Language
+								a.nav__link(href="#") Log In
+								a.nav__link(href="#") Sign Up
 			//- center
 			.center
 				//- layout
@@ -197,8 +204,21 @@ html
 					.section
 						//- tabs
 						.tabs
+							.tabs__nav
+								a.tabs__link.is-active(href="#")
+									.tabs__link-icon
+										i.icon.icon-about
+									.tabs__link-title about
+								a.tabs__link(href="#")
+									.tabs__link-icon
+										i.icon.icon-shipping
+									.tabs__link-title shipping
+								a.tabs__link(href="#")
+									.tabs__link-icon
+										i.icon.icon-faq
+									.tabs__link-title faq
 							.tabs__container
-								.tabs__item
+								.tabs__item.is-active
 									.tabs__title About This Item
 									//- content
 									.content
@@ -271,9 +291,9 @@ html
 				.similar
 					.similar__title You May Also Like...
 					.similar__list.js-similar
-						.similar__item
+						.similar__slide
 							//- item
-							.item
+							.similar__item.item
 								.item__wrap
 									.item__price 18$
 									img.item__pic(src="img/product.jpg", alt="")
@@ -290,9 +310,9 @@ html
 										.item__progress-info
 											.item__progress-val 18 days
 											.item__progress-type left
-						.similar__item
+						.similar__slide
 							//- item
-							.item
+							.similar__item.item
 								.item__wrap
 									.item__price 18$
 									img.item__pic(src="img/product.jpg", alt="")
@@ -309,9 +329,47 @@ html
 										.item__progress-info
 											.item__progress-val 18 days
 											.item__progress-type left
-						.similar__item
+						.similar__slide
 							//- item
-							.item
+							.similar__item.item
+								.item__wrap
+									.item__price 18$
+									img.item__pic(src="img/product.jpg", alt="")
+									.item__head
+										.item__author Robert Downey Jr.
+										.item__title Official Iron Man T-shirt
+								.item__progress
+									.item__progress-el
+										.item__progress-range(style="width: 60%;")
+									.item__progress-wrap
+										.item__progress-info
+											.item__progress-val 65%
+											.item__progress-type funded
+										.item__progress-info
+											.item__progress-val 18 days
+											.item__progress-type left
+						.similar__slide
+							//- item
+							.similar__item.item
+								.item__wrap
+									.item__price 18$
+									img.item__pic(src="img/product.jpg", alt="")
+									.item__head
+										.item__author Robert Downey Jr.
+										.item__title Official Iron Man T-shirt
+								.item__progress
+									.item__progress-el
+										.item__progress-range(style="width: 60%;")
+									.item__progress-wrap
+										.item__progress-info
+											.item__progress-val 65%
+											.item__progress-type funded
+										.item__progress-info
+											.item__progress-val 18 days
+											.item__progress-type left
+						.similar__slide
+							//- item
+							.similar__item.item
 								.item__wrap
 									.item__price 18$
 									img.item__pic(src="img/product.jpg", alt="")
