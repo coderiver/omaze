@@ -97,6 +97,8 @@ a
 .aside
 	+rm(767)
 		float: right
+		width: 42%
+	+rm(1023)
 		width: 39%
 
 .header
@@ -373,10 +375,6 @@ a
 	&__msg
 		+lightitalic
 		text-align: center
-	&__link
-		display: inline-block
-		margin-bottom: 35px
-		font-size: 16px
 	&__btn
 		width: 100%
 		margin-bottom: 7px
@@ -386,6 +384,49 @@ a
 			padding-bottom: 30px
 			border-bottom: 1px solid $border-light 
 
+.sizes
+	margin-bottom: 35px
+	&__head
+		font-size: 16px
+	&__wrap
+		display: none
+		padding-top: 25px
+	&__list
+		margin-bottom: 25px
+	&__product
+		position: relative
+		margin-bottom: 10px
+		padding-left: 18px
+		&:before
+			content: ""
+			position: absolute
+			top: 6px
+			left: 5px
+			width: 6px
+			height: 6px
+			background: $black
+			border-radius: 50%
+	&__table
+		width: 100%
+		th
+			height: 44px
+			padding: 0 10px
+			background: $blue
+			border: 1px solid $blue
+			+extrabold
+			color: #FFF
+			vertical-align: middle
+		td
+			height: 40px
+			padding: 0 10px
+			text-align: center
+			border: 1px solid $border
+			text-align: center
+			vertical-align: middle
+			&:first-child
+				+extrabold
+				font-size: 21px
+	
 .option
 	margin-bottom: 20px
 	user-select: none 
@@ -811,9 +852,16 @@ a
 		+medium
 		font-size: 18px
 		vertical-align: top
+		text-decoration: none
+		&.is-active
+			text-decoration: underline
 		+rm(719)
 			margin: 0 25px 10px
 			font-size: 20px
+	&__item
+		display: none
+		&.is-active
+			display: block
 
 
 

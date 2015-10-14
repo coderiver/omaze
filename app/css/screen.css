@@ -328,6 +328,10 @@ a {
 @media only screen and (min-width: 767px) {
   .aside {
     float: right;
+    width: 42%; } }
+
+@media only screen and (min-width: 1023px) {
+  .aside {
     width: 39%; } }
 
 .header {
@@ -645,10 +649,6 @@ a {
   .product__msg {
     font-family: "National-LightItalic", Arial, sans-serif;
     text-align: center; }
-  .product__link {
-    display: inline-block;
-    margin-bottom: 35px;
-    font-size: 16px; }
   .product__btn {
     width: 100%;
     margin-bottom: 7px; }
@@ -657,6 +657,49 @@ a {
       margin-bottom: 20px;
       padding-bottom: 30px;
       border-bottom: 1px solid #f1f2f3; } }
+
+.sizes {
+  margin-bottom: 35px; }
+  .sizes__head {
+    font-size: 16px; }
+  .sizes__wrap {
+    display: none;
+    padding-top: 25px; }
+  .sizes__list {
+    margin-bottom: 25px; }
+  .sizes__product {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 18px; }
+    .sizes__product:before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 6px;
+      height: 6px;
+      background: #231F20;
+      border-radius: 50%; }
+  .sizes__table {
+    width: 100%; }
+    .sizes__table th {
+      height: 44px;
+      padding: 0 10px;
+      background: #2BC1D6;
+      border: 1px solid #2BC1D6;
+      font-family: "National-Extrabold", Arial, sans-serif;
+      color: #FFF;
+      vertical-align: middle; }
+    .sizes__table td {
+      height: 40px;
+      padding: 0 10px;
+      text-align: center;
+      border: 1px solid #cccdd0;
+      text-align: center;
+      vertical-align: middle; }
+      .sizes__table td:first-child {
+        font-family: "National-Extrabold", Arial, sans-serif;
+        font-size: 21px; }
 
 .option {
   margin-bottom: 20px;
@@ -1129,10 +1172,18 @@ a {
   margin: 0 20px 10px 0;
   font-family: "National-Medium", Arial, sans-serif;
   font-size: 18px;
-  vertical-align: top; }
+  vertical-align: top;
+  text-decoration: none; }
+  .shipping__link.is-active {
+    text-decoration: underline; }
   @media only screen and (min-width: 719px) {
     .shipping__link {
       margin: 0 25px 10px;
       font-size: 20px; } }
+
+.shipping__item {
+  display: none; }
+  .shipping__item.is-active {
+    display: block; }
 
 /*# sourceMappingURL=screen.css.map */

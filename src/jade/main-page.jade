@@ -155,28 +155,67 @@ html
 											input.option__input(type="radio", name="opt2",)
 											span.option__var 
 												span.option__size XXL
-							.product__foot
-								//- link
-								a.product__link.link(href="#") Show sizing chart and product details
-								//- btn
-								button.product__btn.btn BUY IT NOW
-								.product__msg Items ship 2 weeks after campaign closes
+							//- sizes
+							.sizes
+								.sizes__head
+									//- link
+									a.sizes__link.link.js-sizes-link(href="#") Show sizing chart and product details
+								.sizes__wrap.js-sizes
+									.sizes__list
+										.sizes__product Product Detail #1
+										.sizes__product Product Detail #2
+									table.sizes__table
+										thead
+											tr
+												th Size
+												th Wifth
+												th Length
+												th Sleeve
+										tbody
+											tr
+												td S
+												td 18.5”
+												td 18.5”
+												td 18.5”
+											tr
+												td M
+												td 18.5”
+												td 18.5”
+												td 18.5”
+											tr
+												td L
+												td 18.5”
+												td 18.5”
+												td 18.5”
+											tr
+												td XL
+												td 18.5”
+												td 18.5”
+												td 18.5”
+											tr
+												td XXL
+												td 18.5”
+												td 18.5”
+												td 18.5”
+							//- btn
+							button.product__btn.btn BUY IT NOW
+							.product__msg Items ship 2 weeks after campaign closes
 						//- counter
-						.counter
+						.counter.js-counter
 							.counter__item
-								.counter__value 2
+								.counter__value.js-counter-days 2
 								.counter__type days
 							.counter__dots :
 							.counter__item
-								.counter__value 16
+								.counter__value.js-counter-hours 16
 								.counter__type hrs
 							.counter__dots :
 							.counter__item
-								.counter__value 24
+								.counter__value.js-counter-mins 24
 								.counter__type mins
 							.counter__dots :
 							.counter__item
-								.counter__value 15
+								.counter__value.js-counter-secs 15
 								.counter__type secs
 						//- progress
 						.progress
@@ -203,40 +242,40 @@ html
 					//- section
 					.section
 						//- tabs
-						.tabs
+						.tabs.js-tabs
 							.tabs__nav
-								a.tabs__link.is-active(href="#")
+								a.tabs__link.is-active.js-tabs-link(href="#")
 									.tabs__link-icon
 										i.icon.icon-about
 									.tabs__link-title about
-								a.tabs__link(href="#")
+								a.tabs__link.js-tabs-link(href="#")
 									.tabs__link-icon
 										i.icon.icon-shipping
 									.tabs__link-title shipping
-								a.tabs__link(href="#")
+								a.tabs__link.js-tabs-link(href="#")
 									.tabs__link-icon
 										i.icon.icon-faq
 									.tabs__link-title faq
 							.tabs__container
-								.tabs__item.is-active
+								.tabs__item.is-active.js-tabs-item
 									.tabs__title About This Item
 									//- content
 									.content
 										p The design of this T-shirt is inspired by a video we created with Arnold Schwarzenegger to promote his “Blow Sh** Up” campaign. This campaign was launched to raise money for After-School All-Stars, whose amazing initiative is very close to Arnold’s heart.
 										img(src="img/content.jpg", alt="")
-								.tabs__item
+								.tabs__item.js-tabs-item
 									.tabs__title Shipping
 									//- shipping
-									.shipping
+									.shipping.js-shipping
 										.shipping__nav
-											a.shipping__link.is-active(href="#") United States
-											a.shipping__link(href="#") Canada
-											a.shipping__link(href="#") International
+											a.shipping__link.is-active.js-shipping-link(href="#") United States
+											a.shipping__link.js-shipping-link(href="#") Canada
+											a.shipping__link.js-shipping-link(href="#") International
 										.shipping__container
-											.shipping__item
+											.shipping__item.is-active.js-shipping-item
 												//- content
 												.content
-													h4 Sample Header
+													h4 Sample Header 1
 													p Once a campaign ends, we begin the printing process.  This takes about a week.  From there, all domestic orders take approximately one (1) week to ship. Your order will always arrive approximately two (2) weeks after the campaign has ended.
 													table
 														thead
@@ -261,7 +300,63 @@ html
 																td T-shirt
 																td $4.00
 																td $2.00
-								.tabs__item
+											.shipping__item.js-shipping-item
+												//- content
+												.content
+													h4 Sample Header 2
+													p Once a campaign ends, we begin the printing process.  This takes about a week.  From there, all domestic orders take approximately one (1) week to ship. Your order will always arrive approximately two (2) weeks after the campaign has ended.
+													table
+														thead
+															tr
+																th Style
+																th 1st Item
+																th Each Add’l
+														tbody
+															tr
+																td T-shirt
+																td $4.00
+																td $2.00
+															tr
+																td T-shirt
+																td $4.00
+																td $2.00
+															tr
+																td T-shirt
+																td $4.00
+																td $2.00
+															tr
+																td T-shirt
+																td $4.00
+																td $2.00
+											.shipping__item.js-shipping-item
+												//- content
+												.content
+													h4 Sample Header 3
+													p Once a campaign ends, we begin the printing process.  This takes about a week.  From there, all domestic orders take approximately one (1) week to ship. Your order will always arrive approximately two (2) weeks after the campaign has ended.
+													table
+														thead
+															tr
+																th Style
+																th 1st Item
+																th Each Add’l
+														tbody
+															tr
+																td T-shirt
+																td $4.00
+																td $2.00
+															tr
+																td T-shirt
+																td $4.00
+																td $2.00
+															tr
+																td T-shirt
+																td $4.00
+																td $2.00
+															tr
+																td T-shirt
+																td $4.00
+																td $2.00
+								.tabs__item.js-tabs-item
 									.tabs__title Frequently Asked Questions
 									//- content
 									.content
