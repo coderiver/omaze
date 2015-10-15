@@ -1,0 +1,143 @@
+﻿doctype html
+html
+	head
+		meta(charset='utf-8')
+		title Template
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='format-detection', content='telephone=no')
+		link(rel='stylesheet', media='all', href='css/screen.css')
+	body
+		//- popup
+		.popup
+			.popup__wrap
+				//- center
+				.popup__center.center
+					.popup__in
+						button.popup__close x
+						.popup__section
+							//- back
+							.back
+								a.back__link(href="#")
+									i.icon.icon-arrow-back
+									span.back__title Back to order summary
+							//- form
+							.form
+								.form__title SHIPPING INFORMATION:
+								.form__fieldset.form__fieldset_row
+									//- field
+									.form__field.field
+										.field__label Full Name:
+										.field__wrap
+											input.input(type="text")
+									//- field
+									.form__field.field
+										.field__label Email Address:
+										.field__wrap
+											input.input(type="text")
+									//- field
+									.form__field.field
+										.field__label Country:
+										.field__wrap
+											//- select
+											.select
+												.select__head United States
+												select.select__el.js-select
+													option United States
+													option United States
+													option United States
+									//- field
+									.form__field.form__field_lg.field
+										.field__label Shipping Address:
+										.field__wrap
+											input.input(type="text")
+									//- field
+									.form__field.form__field_sm.field
+										.field__label Apt, Suite, etc.:
+										.field__wrap
+											input.input(type="text")
+									//- field
+									.form__field.field
+										.field__label City:
+										.field__wrap
+											input.input(type="text")
+									//- field
+									.form__field.field
+										.field__label State/Province/Region:
+										.field__wrap
+											//- select
+											.select
+												.select__head CA - California
+												select.select__el.js-select
+													option CA - California
+													option CA - California
+													option CA - California
+									//- field
+									.form__field.field
+										.field__label Zip Code:
+										.field__wrap
+											input.input(type="text")
+								.form__fieldset
+									.form__head
+										//- paysys
+										.form__paysys.paysys
+											.paysys__item
+												img.paysys__logo(src="img/pay-systems/visa.svg", alt="")
+											.paysys__item
+												img.paysys__logo(src="img/pay-systems/mastercard.svg", alt="")
+											.paysys__item
+												img.paysys__logo(src="img/pay-systems/amex.svg", alt="")
+											.paysys__item
+												img.paysys__logo(src="img/pay-systems/discover.svg", alt="")
+										.form__title BILLIING:
+									//- card
+									.form__card.card
+										.card__wrap
+											.card__preview
+											.card__number
+												input.card__input.js-card-number(type="text")
+										.card__wrap
+											.card__preview
+												img.card__logo(src="img/pay-systems/visa.svg", alt="")
+											.card__number.card__number_short
+												input.card__input(type="text", value="5989")
+											.card__date
+												input.card__input.js-card-date(type="text")
+											.card__cvv
+												input.card__input.js-card-cvv(type="text")
+										.card__edit
+											a.card__edit-link(href="#") Enter card number for expiration date and CVV
+								.form__foot
+									button.form__btn.btn(disabled) CONFIRM ORDER
+									button.form__btn.btn PAY $36 + $4 SHIPPING
+						.popup__aside
+							//- order
+							.order
+								.order__title ORDER SUMMARY:
+								.order__title-sub Benefiting After-School All-Stars
+								.order__list
+									.order__item
+										.order__preview
+											img.order__pic(src="img/product.jpg", alt="")
+										.order__info
+											.order__name Men’s T-Shirt
+											.order__options Heather Grey - L
+											.order__price $18.00
+									.order__item
+										.order__preview
+											img.order__pic(src="img/product.jpg", alt="")
+										.order__info
+											.order__name Men’s T-Shirt
+											.order__options Heather Grey - L
+											.order__price $18.00
+								.order__stats
+									.order__stats-value $3.00
+									.order__stats-title Sales Tax:
+								.order__stats
+									.order__stats-value $4.00
+									.order__stats-title Shipping:
+								.order__stats.order__stats_total
+									.order__stats-value $43.00
+									.order__stats-title TOTAL:
+
+		//- scripts
+		script(src='js/lib/head.js', data-headjs-load='js/init.js')

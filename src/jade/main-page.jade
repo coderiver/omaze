@@ -113,10 +113,10 @@ html
 											//- select
 											.select
 												.select__head Men’s T-Shirt - $18
-												select.select__el
+												select.select__el.js-select
 													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
+													option Men’s T-Shirt - $19
+													option Men’s T-Shirt - $20
 								//- option
 								.option
 									.option__title COLOR
@@ -268,9 +268,11 @@ html
 									//- shipping
 									.shipping.js-shipping
 										.shipping__nav
-											a.shipping__link.is-active.js-shipping-link(href="#") United States
-											a.shipping__link.js-shipping-link(href="#") Canada
-											a.shipping__link.js-shipping-link(href="#") International
+											.shipping__nav-head.js-shipping-head United States
+											.shipping__nav-list.js-shipping-list
+												a.shipping__link.is-active.js-shipping-link(href="#") United States
+												a.shipping__link.js-shipping-link(href="#") Canada
+												a.shipping__link.js-shipping-link(href="#") International
 										.shipping__container
 											.shipping__item.is-active.js-shipping-item
 												//- content

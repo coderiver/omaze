@@ -15,8 +15,7 @@ head.ready(function() {
 						breakpoint: 719,
 						settings: {
 							slidesToShow: 1,
-							dots: false,
-							arrows: false
+							dots: false
 						}
 					}
 				]
@@ -26,6 +25,9 @@ head.ready(function() {
 				slidesToShow: 7,
 				swipe: false,
 				mobileFirst: true,
+				centerMode: true,
+				centerPadding: 10,
+				focusOnSelect: true,
 				responsive: [
 					{
 						breakpoint: 719,
@@ -115,16 +117,56 @@ head.ready(function() {
 	(function () {
 		var shipping = $('.js-shipping'),
 			link     = shipping.find('.js-shipping-link'),
-			item     = shipping.find('.js-shipping-item');
+			item     = shipping.find('.js-shipping-item'),
+			head     = shipping.find('.js-shipping-head'),
+			list     = shipping.find('.js-shipping-list');
+		head.on('click', function () {
+			list.addClass('is-active');
+			return false;
+		});
 		link.on('click', function () {
 			var _this = $(this),
-				index = _this.index();
+				index = _this.index(),
+				text  = _this.text();
 			link.removeClass('is-active');
 			_this.addClass('is-active');
 			item.removeClass('is-active');
 			item.eq(index).addClass('is-active');
+			head.text(text);
+			list.removeClass('is-active');
 			return false;
 		});
+	}());
+
+	// masks
+	(function () {
+		var number = $('.js-card-number'),
+			date   = $('.js-card-date'),
+			cvv    = $('.js-card-cvv');
+		if (number.length) {
+			number.mask('0000 0000 0000 0000', {placeholder: "XXXX XXXX XXXX XXXX"});
+		};
+		if (date.length) {
+			date.mask('00/00', {placeholder: "MM/YY"});
+		};
+		if (cvv.length) {
+			cvv.mask('000', {placeholder: "CVV"});
+		};
+	}());
+
+	// select
+	(function () {
+		var select = $('.js-select');
+		if (select.length) {
+			select.each(function () {
+				var _this = $(this);
+				_this.on('change', function () {
+					var selected = _this.find('option:selected');
+					    text     = selected.text();
+					_this.prev().text(text);
+				});
+			});
+		};
 	}());
 	
 });

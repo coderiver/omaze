@@ -276,8 +276,12 @@ a
 			padding-bottom: 30px
 		.slick-prev
 			left: 10px
+			+rm(767)
+				left: -25px
 		.slick-next
 			right: 10px
+			+rm(767)
+				right: -25px
 	&__item
 		position: relative
 	&__item-pic
@@ -304,11 +308,16 @@ a
 			display: block
 		&-item
 			width: 68px
+			padding: 2px 0
 			text-align: center
 		&-img
 			max-width: 58px
 			max-height: 58px
 			border: 1px solid $border
+			cursor: pointer
+		.slick-center &-img
+			border-color: $blue
+			box-shadow: 0 0 0 2px $blue
 		.slick-prev
 			left: -25px
 		.slick-next
@@ -524,17 +533,125 @@ a
 		border: none
 		cursor: pointer
 
+.form
+	margin-bottom: 40px
+	&__title
+		margin-bottom: 8px
+		+bold
+		letter-spacing: 3px
+		+rm(1023)
+			margin-bottom: 30px
+	&__head
+		+clr
+	&__paysys
+		float: right
+	&__fieldset
+		margin-bottom: 25px
+	&__fieldset_row
+		+rm(1023)
+			margin: 0 -10px 40px
+			+clr
+	&__field
+		+rm(1023)
+			float: left
+			width: 50%
+			padding: 0 10px
+	&__field_lg
+		+rm(1023)
+			width: 65%
+	&__field_sm
+		+rm(1023)
+			width: 35%
+	&__btn
+		width: 100%
+
+.field
+	margin-bottom: 5px
+	&__label
+		margin-bottom: 5px
+		font-size: 18px
+		+rm(719)
+			+extrabold
+			font-size: 20px
+
+.input
+	width: 100%
+	height: 42px
+	padding: 0 12px 
+	border: 1px solid $border
+	border-radius: 2px
+	+light
+	font-size: 18px
+
 .btn
 	height: 56px
 	padding: 0 20px
 	background: $pink
 	border-radius: 4px
 	+light
-	font-size: 24px
+	font-size: 22px
 	color: #fff 
-	letter-spacing: 2px
+	letter-spacing: 1px
 	&:hover
-		background: $pink-light 
+		background: $pink-light
+	&:disabled
+		background: #BCBDC0
+		cursor: not-allowed 
+
+.paysys
+	font-size: 0
+	&__item
+		display: inline-block
+		margin-left: 10px
+		vertical-align: top
+		&:first-child
+			margin: 0
+	&__logo
+		width: 33px 
+
+.card
+	&__wrap
+		height: 42px
+		padding: 0 12px 
+		border: 1px solid $border
+		background: #FFF 
+		border-radius: 2px
+		+clr
+	&__preview
+		float: left
+		width: 33px
+		height: 22px
+		margin: 10px 12px 0 0
+		background: $border
+		border-radius: 2px 
+		font-size: 0
+	&__logo
+		width: 33px
+	&__number
+		overflow: hidden
+	&__input
+		width: 100%
+		height: 40px
+		+light
+		font-size: 18px
+	&__number_short
+		float: left
+		width: 65px
+	&__date
+		float: left
+		width: 65px
+	&__cvv
+		float: left
+		width: 65px
+	&__edit
+		padding-top: 3px
+		&-link
+			+lightitalic
+			text-decoration: underline
+			font-size: 14px
+			color: $gray-dark 
+			&:hover
+				text-decoration: none 
 
 .tabs
 	&__nav
@@ -550,6 +667,10 @@ a
 		vertical-align: top
 		text-decoration: none
 		text-align: center
+		opacity: .7 
+		&:hover,
+		&.is-active
+			opacity: 1 
 		&.is-active &-title
 			border-color: $blue
 		&-icon
@@ -581,6 +702,7 @@ a
 			font-size: 26px
 			color: $black
 	&__item
+		position: relative
 		+rm(767)
 			display: none
 		&.is-active
@@ -720,6 +842,7 @@ a
 		margin: 0 8px 10px
 		background: $black 
 		border-radius: 50%
+		border: 2px solid $black
 		font-size: 0
 		color: #FFF 
 		vertical-align: top
@@ -727,6 +850,13 @@ a
 			width: 54px
 			height: 54px
 			margin: 0 10px 10px
+		&:hover
+			background: #FFF
+			color: $black
+		&:active
+			background: $black
+			color: #fff
+			opacity: .7   
 		.icon-twitter
 			font-size: 17px
 			+rm(719)
@@ -751,8 +881,13 @@ a
 .item
 	width: 276px
 	border: 1px solid $border
+	cursor: pointer
 	+rm(719)
 		width: 290px
+	&:hover &__wrap
+		opacity: .6
+	&:hover &__progress-type
+		+lightitalic
 	&__wrap
 		position: relative
 	&__price
@@ -772,7 +907,8 @@ a
 			right: 18px
 			width: 46px
 			height: 46px
-			font-size: 22px 
+			font-size: 22px
+			line-height: 46px 
 	&__pic
 		display: block
 		max-width: 100%
@@ -846,6 +982,35 @@ a
 		+rm(719)
 			margin: 0 0 30px
 			text-align: center
+		+rm(767)
+			position: absolute
+			top: 5px
+			right: 0
+		&-head
+			display: none
+			+medium
+			color: $blue
+			cursor: pointer 
+			&:after
+				content: ""
+				display: inline-block
+				margin-left: 4px
+				+arr(9,5,$blue,b)
+				vertical-align: middle
+			+rm(767)
+				display: block
+		&-list
+			+rm(767)
+				display: none
+				position: absolute
+				top: -6px
+				right: -4px
+				min-width: 100%
+				background: #FFF
+				border-radius: 4px
+				border: 1px solid $border 
+				&.is-active
+					display: block
 	&__link
 		display: inline-block
 		margin: 0 20px 10px 0
@@ -855,15 +1020,156 @@ a
 		text-decoration: none
 		&.is-active
 			text-decoration: underline
+			+rm(767)
+				background: rgba($blue,.1) 
 		+rm(719)
 			margin: 0 25px 10px
 			font-size: 20px
+		+rm(767)
+			display: block
+			margin: 0
+			padding: 5px 15px
+			border-top: 1px solid $border 
+			font-size: 18px
+			white-space: nowrap
+			&:first-child
+				border: none
 	&__item
 		display: none
 		&.is-active
 			display: block
 
+.back
+	margin-bottom: 15px
+	&__link,
+	&__title
+		display: inline-block
+		vertical-align: middle
+	&__link
+		text-decoration: none
+	&__link:hover &__title
+		text-decoration: none
+	&__title
+		+lightitalic
+		font-size: 17px 
+		text-decoration: underline
+	.icon
+		margin-right: 5px
+		font-size: 10px
+		vertical-align: middle
 
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	min-width: 320px
+	background: rgba($black,.4)
+	overflow: auto
+	+rm(719)
+		padding: 35px 0
+	&__in
+		position: relative
+		background: #FFF 
+		+clr
+		&:before
+			+rm(719)
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				width: 50%
+				background: $gray-light
+			+rm(767)
+				left: 290px
+				width: auto
+	&__close
+		display: none
+		position: absolute
+		top: 10px
+		right: 10px
+		width: 30px
+		height: 30px
+		background: #FFF
+		border-radius: 50%
+		+extrabold
+		font-size: 22px
+		line-height: 30px
+		z-index: 10
+		+rm(719)
+			display: block
+	&__section,
+	&__aside
+		position: relative
+		padding: 35px 25px 30px
+		z-index: 2 
+	&__section
+		+rm(719)
+			float: right
+			width: 50%
+		+rm(767)
+			width: 100%
+			margin-left: -290px
+			padding-left: 320px 
+	&__aside
+		+rm(719)
+			overflow: hidden
+		+rm(767)
+			max-width: 290px
+
+.order
+	padding-bottom: 50px
+	&__title
+		margin-bottom: 2px
+		+bold
+		letter-spacing: 3px
+	&__title-sub
+		margin-bottom: 30px
+		+lightitalic
+		color: $pink
+	&__item
+		margin-bottom: 20px
+		+clr
+	&__preview
+		float: left
+		width: 70px
+		margin-right: 20px
+	&__pic
+		display: block
+		max-width: 100%
+	&__info
+		overflow: hidden
+	&__name
+		+extrabold
+		font-size: 18px
+	&__options
+		margin-bottom: 5px
+		+lightitalic
+		font-size: 16px
+		color: $gray-dark
+	&__price
+		text-align: right
+		font-size: 18px
+	&__stats
+		margin-bottom: 2px
+		+clr
+		&-value
+			float: right
+			margin-left: 20px
+			padding-top: 1px
+			font-size: 18px
+		&-title
+			display: table
+			+extrabold
+			font-size: 20px
+		&_total
+			padding-top: 20px
+		&_total &-value
+			+extrabold
+			padding: 0
+			font-size: 20px
 
 
 
