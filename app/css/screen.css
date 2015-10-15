@@ -894,6 +894,11 @@ a {
   .btn:disabled {
     background: #BCBDC0;
     cursor: not-allowed; }
+  .btn__paypal {
+    width: 105px; }
+  .btn_white {
+    background: #FFF;
+    color: #231F20; }
 
 .paysys {
   font-size: 0; }
