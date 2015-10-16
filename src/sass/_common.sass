@@ -101,6 +101,22 @@ a
 	+rm(1023)
 		width: 39%
 
+.column
+	width: 100%
+	max-width: 500px
+	margin: 0 auto
+	+rm(767)
+		max-width: 100%
+		margin: 0
+	&_left
+		+rm(767)
+			float: left
+			width: 40%
+	&_right
+		+rm(767)
+			width: 50%
+			float: right
+
 .header
 	min-height: 68px
 	margin-bottom: 30px
@@ -188,8 +204,6 @@ a
 			font-size: 18px
 	p
 		margin-bottom: 20px
-		+rm(719)
-			margin-bottom: 40px
 	img
 		max-width: 100%
 	table
@@ -746,15 +760,43 @@ a
 	+rm(719)
 		margin-bottom: 30px
 	&__el
+		position: relative
 		height: 14px
 		margin-bottom: 20px
-		border-radius: 7px
+		border-radius: 7px 0 0 7px
 		background: $gray
-		overflow: hidden
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			height: 14px
+			width: 14px
+			border-radius: 7px
+			box-shadow: 1px 0 0 #fff, 2px 0 0 #fff, 4px 0 0 #fff, 7px 0 0 #fff
 	&__range
+		position: relative
 		height: 14px
 		background: linear-gradient(#f05394, #f05394 50%, $pink 50%, $pink)
 		border-radius: 7px 0 0 7px
+	&__tooltip
+		position: absolute
+		right: 0
+		bottom: 20px
+		width: 40px
+		margin-right: -20px
+		background: $black
+		+extrabold
+		font-size: 14px
+		text-align: center
+		color: #FFF
+		&:after
+			content: ""
+			position: absolute
+			top: 100%
+			left: 50%
+			margin-left: -6px
+			+arr(12,6,$black,b)
 	&__wrap
 		position: relative
 		max-width: 400px
@@ -793,6 +835,16 @@ a
 		font-size: 27px
 	&__type
 		font-size: 18px
+	&__label
+		margin-top: -20px
+		+clr
+		&-item
+			float: right
+			&:first-child
+				float: left
+	&_scale
+		margin-bottom: 30px
+		padding-top: 24px
 
 .info
 	display: table
@@ -882,6 +934,34 @@ a
 			font-size: 14px
 			+rm(719)
 				font-size: 21px
+	&__text
+		margin-bottom: 20px
+		padding-top: 30px
+		font-size: 20px
+		+rm(767)
+			padding: 0
+			font-size: 28px
+	&_simple
+		margin-bottom: 60px
+		+rm(767)
+			margin-bottom: 0
+			text-align: left
+	&_simple &__btn
+		margin-left: 4px
+		margin-right: 4px
+		border-color: transparent
+		background: transparent
+		color: $blue 
+		.icon-twitter
+			font-size: 24px 
+		.icon-facebook
+			font-size: 27px
+		.icon-instagram
+			font-size: 25px
+		.icon-pinterest
+			font-size: 28px
+		.icon-email
+			font-size: 21px
 
 .item
 	width: 276px
@@ -1074,6 +1154,10 @@ a
 	overflow: auto
 	+rm(719)
 		padding: 35px 0
+	&__center
+		padding: 0
+		+rm(719)
+			padding: 0 35px
 	&__in
 		position: relative
 		background: #FFF 
@@ -1175,10 +1259,47 @@ a
 			+extrabold
 			padding: 0
 			font-size: 20px
+		&_thin &-title
+			+light
+	&__id
+		margin-bottom: 15px
+		&-number
+			margin-right: 5px
+			+bold
 
+.thank
+	margin-bottom: 65px
+	text-align: center
+	font-size: 28px
+	+rm(767)
+		margin-bottom: 25px
+		text-align: left
+	&__title
+		margin-bottom: 25px
+	&__bold
+		+bold
 
+.mark
+	margin-bottom: 45px
+	text-align: center
+	font-size: 0
+	color: $blue
+	+rm(767)
+		margin-bottom: 100px
+		padding-top: 30px
+	.icon
+		font-size: 140px 
 
+.title
+	margin-bottom: 5px
+	+bold
+	font-size: 23px
+	+rm(767)
+		font-size: 28px
 
-
+.bg
+	+rm(719)
+		padding-top: 25px
+		background: #F5F5F7 
 
 

@@ -334,6 +334,23 @@ a {
   .aside {
     width: 39%; } }
 
+.column {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 767px) {
+    .column {
+      max-width: 100%;
+      margin: 0; } }
+  @media only screen and (min-width: 767px) {
+    .column_left {
+      float: left;
+      width: 40%; } }
+  @media only screen and (min-width: 767px) {
+    .column_right {
+      width: 50%;
+      float: right; } }
+
 .header {
   min-height: 68px;
   margin-bottom: 30px;
@@ -434,9 +451,6 @@ a {
         font-size: 18px; } }
   .content p {
     margin-bottom: 20px; }
-    @media only screen and (min-width: 719px) {
-      .content p {
-        margin-bottom: 40px; } }
   .content img {
     max-width: 100%; }
   .content table {
@@ -1066,16 +1080,48 @@ a {
     .progress {
       margin-bottom: 30px; } }
   .progress__el {
+    position: relative;
     height: 14px;
     margin-bottom: 20px;
-    border-radius: 7px;
-    background: #D9DADB;
-    overflow: hidden; }
+    border-radius: 7px 0 0 7px;
+    background: #D9DADB; }
+    .progress__el:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 14px;
+      width: 14px;
+      border-radius: 7px;
+      box-shadow: 1px 0 0 #fff, 2px 0 0 #fff, 4px 0 0 #fff, 7px 0 0 #fff; }
   .progress__range {
+    position: relative;
     height: 14px;
     background: -webkit-linear-gradient(#f05394, #f05394 50%, #EE4288 50%, #EE4288);
     background: linear-gradient(#f05394, #f05394 50%, #EE4288 50%, #EE4288);
     border-radius: 7px 0 0 7px; }
+  .progress__tooltip {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    width: 40px;
+    margin-right: -20px;
+    background: #231F20;
+    font-family: "National-Extrabold", Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #FFF; }
+    .progress__tooltip:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -6px;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 6px 6px 0 6px;
+      border-color: #231F20 transparent transparent transparent; }
   .progress__wrap {
     position: relative;
     max-width: 400px;
@@ -1121,6 +1167,20 @@ a {
     font-size: 27px; }
   .progress__type {
     font-size: 18px; }
+  .progress__label {
+    margin-top: -20px;
+    *zoom: 1; }
+    .progress__label:after {
+      content: " ";
+      display: table;
+      clear: both; }
+    .progress__label-item {
+      float: right; }
+      .progress__label-item:first-child {
+        float: left; }
+  .progress_scale {
+    margin-bottom: 30px;
+    padding-top: 24px; }
 
 .info {
   display: table;
@@ -1220,6 +1280,36 @@ a {
       @media only screen and (min-width: 719px) {
         .share__btn .icon-email {
           font-size: 21px; } }
+  .share__text {
+    margin-bottom: 20px;
+    padding-top: 30px;
+    font-size: 20px; }
+    @media only screen and (min-width: 767px) {
+      .share__text {
+        padding: 0;
+        font-size: 28px; } }
+  .share_simple {
+    margin-bottom: 60px; }
+    @media only screen and (min-width: 767px) {
+      .share_simple {
+        margin-bottom: 0;
+        text-align: left; } }
+  .share_simple .share__btn {
+    margin-left: 4px;
+    margin-right: 4px;
+    border-color: transparent;
+    background: transparent;
+    color: #2BC1D6; }
+    .share_simple .share__btn .icon-twitter {
+      font-size: 24px; }
+    .share_simple .share__btn .icon-facebook {
+      font-size: 27px; }
+    .share_simple .share__btn .icon-instagram {
+      font-size: 25px; }
+    .share_simple .share__btn .icon-pinterest {
+      font-size: 28px; }
+    .share_simple .share__btn .icon-email {
+      font-size: 21px; }
 
 .item {
   width: 276px;
@@ -1429,6 +1519,11 @@ a {
   @media only screen and (min-width: 719px) {
     .popup {
       padding: 35px 0; } }
+  .popup__center {
+    padding: 0; }
+    @media only screen and (min-width: 719px) {
+      .popup__center {
+        padding: 0 35px; } }
   .popup__in {
     position: relative;
     background: #FFF;
@@ -1546,5 +1641,50 @@ a {
       font-family: "National-Extrabold", Arial, sans-serif;
       padding: 0;
       font-size: 20px; }
+    .order__stats_thin .order__stats-title {
+      font-family: "National-Light", Arial, sans-serif; }
+  .order__id {
+    margin-bottom: 15px; }
+    .order__id-number {
+      margin-right: 5px;
+      font-family: "National-Bold", Arial, sans-serif; }
+
+.thank {
+  margin-bottom: 65px;
+  text-align: center;
+  font-size: 28px; }
+  @media only screen and (min-width: 767px) {
+    .thank {
+      margin-bottom: 25px;
+      text-align: left; } }
+  .thank__title {
+    margin-bottom: 25px; }
+  .thank__bold {
+    font-family: "National-Bold", Arial, sans-serif; }
+
+.mark {
+  margin-bottom: 45px;
+  text-align: center;
+  font-size: 0;
+  color: #2BC1D6; }
+  @media only screen and (min-width: 767px) {
+    .mark {
+      margin-bottom: 100px;
+      padding-top: 30px; } }
+  .mark .icon {
+    font-size: 140px; }
+
+.title {
+  margin-bottom: 5px;
+  font-family: "National-Bold", Arial, sans-serif;
+  font-size: 23px; }
+  @media only screen and (min-width: 767px) {
+    .title {
+      font-size: 28px; } }
+
+@media only screen and (min-width: 719px) {
+  .bg {
+    padding-top: 25px;
+    background: #F5F5F7; } }
 
 /*# sourceMappingURL=screen.css.map */

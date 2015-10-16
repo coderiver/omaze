@@ -1,0 +1,133 @@
+﻿doctype html
+html
+	head
+		meta(charset='utf-8')
+		title Template
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='format-detection', content='telephone=no')
+		link(rel='stylesheet', media='all', href='css/screen.css')
+	body
+		//- wrapper
+		.wrapper
+			header.header
+				.header__center.center
+					a.header__logo(href="#") omaze
+					.nav
+						button.nav__btn menu
+						.nav__list
+							.nav__group
+								a.nav__link(href="#") Experiences
+								a.nav__link(href="#") Charities
+								a.nav__link(href="#") Blog
+							.nav__group
+								a.nav__link(href="#") Preferred Language
+								a.nav__link(href="#") Log In
+								a.nav__link(href="#") Sign Up
+			//- center
+			.center
+				//- layout
+				.layout
+					//- column
+					.column.column_right
+						//- thank
+						.thank
+							.thank__title Your order is complete!
+							.thank__text We will print and ship your order on 
+								span.thank__bold October 2nd, 2015!
+					//- column
+					.column.column_left
+						//- mark
+						.mark
+							i.icon.icon-makes-an-impact-1
+						//- progress
+						.progress.progress_scale
+							.progress__el
+								.progress__range(style="width: 60%;")
+									.progress__tooltip 60%
+							.progress__label
+								.progress__label-item 500
+								.progress__label-item 1000
+					//- column
+					.column.column_right
+						//- share
+						.share.share_simple
+							.share__text Help us reach our impact goal by sharing this campaign with your friends:
+							.share__list
+								button.share__btn
+									i.icon.icon-twitter
+								button.share__btn
+									i.icon.icon-facebook
+								button.share__btn
+									i.icon.icon-instagram
+								button.share__btn
+									i.icon.icon-pinterest
+								button.share__btn
+									i.icon.icon-email
+			//- bg
+			.bg
+				//- center
+				.center
+					//- layout
+					.layout
+						//- column
+						.column.column_left
+							//- title
+							.title Order Summary:
+							//- order
+							.order
+								.order__id Order ID:
+									span.order__id-number 4646835
+								.order__title-campaign Campaign:
+								.order__title-sub Benefiting After-School All-Stars
+								.order__list
+									.order__item
+										.order__preview
+											img.order__pic(src="img/product.jpg", alt="")
+										.order__info
+											.order__name Men’s T-Shirt
+											.order__options Heather Grey - L
+											.order__price $18.00
+									.order__item
+										.order__preview
+											img.order__pic(src="img/product.jpg", alt="")
+										.order__info
+											.order__name Men’s T-Shirt
+											.order__options Heather Grey - L
+											.order__price $18.00
+								.order__stats.order__stats_thin
+									.order__stats-value $3.00
+									.order__stats-title Sales Tax:
+								.order__stats.order__stats_thin
+									.order__stats-value $4.00
+									.order__stats-title Shipping:
+								.order__stats.order__stats_total
+									.order__stats-value $43.00
+									.order__stats-title TOTAL:
+								.order__stats.order__stats_thin
+									.order__stats-value $3.00
+									.order__stats-title Payment method:
+								.order__stats.order__stats_thin
+									.order__stats-value **** 9452
+									.order__stats-title Card number:
+						//- column
+						.column.column_right
+							//- title
+							.title Shipping Address
+							//- content
+							.content
+								p Orders begin shipping October 2, 2015
+								p Morgan Furlong
+									br
+									| 3530 Hayden Ave Suite B
+									br
+									| Culver City, CA
+							//- title
+							.title Contact Support
+							//- content
+							.content
+								p If you have any questions, please feel free to contact our customer support team by emailing us at 
+									a(href="mailto:support@omaze.com") support@omaze.com
+									| . We will be in touch as soon as possible!
+
+		//- scripts
+		script(src='js/lib/head.js', data-headjs-load='js/init.js')
