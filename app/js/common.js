@@ -140,17 +140,36 @@ head.ready(function() {
 
 	// masks
 	(function () {
-		var number = $('.js-card-number'),
-			date   = $('.js-card-date'),
-			cvv    = $('.js-card-cvv');
+		var number      = $('.js-card-number'),
+			numberFull  = $('.js-card-number-full'),
+			numberShort = $('.js-card-number-short'),
+			date        = $('.js-card-date'),
+			cvv         = $('.js-card-cvv'),
+			fieldset    = $('.js-card-fieldset');
 		if (number.length) {
-			number.mask('0000 0000 0000 0000', {placeholder: "XXXX XXXX XXXX XXXX"});
+			number.mask('9999 9999 9999 9999', {
+				placeholder: "XXXX XXXX XXXX XXXX",
+				completed: function() {
+					var cep = $(this).val();
+					fieldset.show();
+					numberFull.hide();
+					numberShort.val(cep.substring(15));
+					date.focus();
+				}
+			});
 		};
 		if (date.length) {
-			date.mask('00/00', {placeholder: "MM/YY"});
+			date.mask('99/99', {
+				placeholder: "MM/YY",
+				completed: function () {
+					cvv.focus();
+				}
+			});
 		};
 		if (cvv.length) {
-			cvv.mask('000', {placeholder: "CVV"});
+			cvv.mask('999', {
+				placeholder: "CVV"
+			});
 		};
 	}());
 
@@ -167,6 +186,31 @@ head.ready(function() {
 				});
 			});
 		};
+	}());
+
+	// checkbox
+	(function () {
+		var country  = $('.js-checkout-select-country'),
+			state    = $('.js-checkout-label-state'),
+			stateAll = $('.js-checkout-label-state-all'),
+			wrap     = $('.js-checkout-wrap-state'),
+			wrapAll  = $('.js-checkout-wrap-state-all');
+		country.on('change', function () {
+			var selected = $(this).find('option:selected');
+			    value    = selected.val();
+			if (value !== 'us') {
+				state.hide();
+				stateAll.show();
+				wrap.hide();
+				wrapAll.show();
+			}
+			else {
+				state.show();
+				stateAll.hide();
+				wrap.show();
+				wrapAll.hide();
+			}
+		});
 	}());
 	
 });

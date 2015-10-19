@@ -19,12 +19,18 @@
                 <div class="form__title">SHIPPING INFORMATION:</div>
                 <div class="form__fieldset form__fieldset_row">
                   <div class="form__field field">
-                    <div class="field__label">Full Name:</div>
+                    <div class="field__label">First Name:</div>
                     <div class="field__wrap">
                       <input type="text" class="input">
                     </div>
                   </div>
                   <div class="form__field field">
+                    <div class="field__label">Last Name:</div>
+                    <div class="field__wrap">
+                      <input type="text" class="input">
+                    </div>
+                  </div>
+                  <div class="form__field form__field_wide field">
                     <div class="field__label">Email Address:</div>
                     <div class="field__wrap">
                       <input type="text" class="input">
@@ -35,10 +41,10 @@
                     <div class="field__wrap">
                       <div class="select">
                         <div class="select__head">United States</div>
-                        <select class="select__el js-select">
-                          <option>United States</option>
-                          <option>United States</option>
-                          <option>United States</option>
+                        <select class="select__el js-select js-checkout-select-country">
+                          <option value="us">United States</option>
+                          <option value="canada">Canada</option>
+                          <option value="inter">International</option>
                         </select>
                       </div>
                     </div>
@@ -62,8 +68,9 @@
                     </div>
                   </div>
                   <div class="form__field field">
-                    <div class="field__label">State/Province/Region:</div>
-                    <div class="field__wrap">
+                    <div class="field__label js-checkout-label-state">State</div>
+                    <div class="field__label field__label_hidden js-checkout-label-state-all">State/Province/Region:</div>
+                    <div class="field__wrap js-checkout-wrap-state">
                       <div class="select">
                         <div class="select__head">CA - California</div>
                         <select class="select__el js-select">
@@ -72,6 +79,9 @@
                           <option>CA - California</option>
                         </select>
                       </div>
+                    </div>
+                    <div class="field__wrap field__wrap_hidden js-checkout-wrap-state-all">
+                      <input type="text" class="input">
                     </div>
                   </div>
                   <div class="form__field field">
@@ -93,21 +103,21 @@
                   </div>
                   <div class="form__card card">
                     <div class="card__wrap">
-                      <div class="card__preview"></div>
-                      <div class="card__number">
-                        <input type="text" class="card__input js-card-number">
+                      <div class="card__preview"><img src="img/pay-systems/visa.svg" alt="" class="card__preview-pic">
                       </div>
-                    </div>
-                    <div class="card__wrap">
-                      <div class="card__preview"><img src="img/pay-systems/visa.svg" alt="" class="card__logo"></div>
-                      <div class="card__number card__number_short">
-                        <input type="text" value="5989" class="card__input">
+                      <div class="card__number js-card-number-full">
+                        <input type="text" placeholder="XXXX XXXX XXXX XXXX" class="card__input js-card-number">
                       </div>
-                      <div class="card__date">
-                        <input type="text" class="card__input js-card-date">
-                      </div>
-                      <div class="card__cvv">
-                        <input type="text" class="card__input js-card-cvv">
+                      <div class="card__fieldset js-card-fieldset">
+                        <div class="card__number card__number_short">
+                          <input type="text" readonly class="card__input js-card-number-short">
+                        </div>
+                        <div class="card__date">
+                          <input type="text" placeholder="MM/YY" class="card__input js-card-date">
+                        </div>
+                        <div class="card__cvv">
+                          <input type="text" placeholder="CVV" class="card__input js-card-cvv">
+                        </div>
                       </div>
                     </div>
                     <div class="card__edit"><a href="#" class="card__edit-link">Enter card number for expiration date and CVV</a></div>

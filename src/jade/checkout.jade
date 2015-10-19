@@ -26,11 +26,16 @@ html
 								.form__fieldset.form__fieldset_row
 									//- field
 									.form__field.field
-										.field__label Full Name:
+										.field__label First Name:
 										.field__wrap
 											input.input(type="text")
 									//- field
 									.form__field.field
+										.field__label Last Name:
+										.field__wrap
+											input.input(type="text")
+									//- field
+									.form__field.form__field_wide.field
 										.field__label Email Address:
 										.field__wrap
 											input.input(type="text")
@@ -41,10 +46,10 @@ html
 											//- select
 											.select
 												.select__head United States
-												select.select__el.js-select
-													option United States
-													option United States
-													option United States
+												select.select__el.js-select.js-checkout-select-country
+													option(value="us") United States
+													option(value="canada") Canada
+													option(value="inter") International
 									//- field
 									.form__field.form__field_lg.field
 										.field__label Shipping Address:
@@ -62,8 +67,9 @@ html
 											input.input(type="text")
 									//- field
 									.form__field.field
-										.field__label State/Province/Region:
-										.field__wrap
+										.field__label.js-checkout-label-state State
+										.field__label.field__label_hidden.js-checkout-label-state-all State/Province/Region:
+										.field__wrap.js-checkout-wrap-state
 											//- select
 											.select
 												.select__head CA - California
@@ -71,6 +77,9 @@ html
 													option CA - California
 													option CA - California
 													option CA - California
+										.field__wrap.field__wrap_hidden.js-checkout-wrap-state-all
+											//- input
+											input.input(type="text")
 									//- field
 									.form__field.field
 										.field__label Zip Code:
@@ -93,17 +102,17 @@ html
 									.form__card.card
 										.card__wrap
 											.card__preview
-											.card__number
-												input.card__input.js-card-number(type="text")
-										.card__wrap
-											.card__preview
-												img.card__logo(src="img/pay-systems/visa.svg", alt="")
-											.card__number.card__number_short
-												input.card__input(type="text", value="5989")
-											.card__date
-												input.card__input.js-card-date(type="text")
-											.card__cvv
-												input.card__input.js-card-cvv(type="text")
+												img.card__preview-pic(src="img/pay-systems/visa.svg", alt="")
+												//- img.card__preview-pic(src="img/card-cvv.svg", alt="")
+											.card__number.js-card-number-full
+												input.card__input.js-card-number(type="text", placeholder="XXXX XXXX XXXX XXXX")
+											.card__fieldset.js-card-fieldset
+												.card__number.card__number_short
+													input.card__input.js-card-number-short(type="text", readonly)
+												.card__date
+													input.card__input.js-card-date(type="text", placeholder="MM/YY")
+												.card__cvv
+													input.card__input.js-card-cvv(type="text", placeholder="CVV")
 										.card__edit
 											a.card__edit-link(href="#") Enter card number for expiration date and CVV
 								.form__foot

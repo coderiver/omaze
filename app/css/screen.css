@@ -707,6 +707,9 @@ a {
       border-radius: 50%; }
   .sizes__table {
     width: 100%; }
+    .sizes__table-pic {
+      display: block;
+      max-width: 100%; }
     .sizes__table th {
       height: 44px;
       padding: 0 10px;
@@ -867,6 +870,9 @@ a {
       width: 50%;
       padding: 0 10px; } }
   @media only screen and (min-width: 1023px) {
+    .form__field_wide {
+      width: 100%; } }
+  @media only screen and (min-width: 1023px) {
     .form__field_lg {
       width: 65%; } }
   @media only screen and (min-width: 1023px) {
@@ -884,6 +890,9 @@ a {
       .field__label {
         font-family: "National-Extrabold", Arial, sans-serif;
         font-size: 20px; } }
+  .field__label_hidden,
+  .field__wrap_hidden {
+    display: none; }
 
 .input {
   width: 100%;
@@ -979,6 +988,9 @@ a {
     color: #939598; }
     .card__edit-link:hover {
       text-decoration: none; }
+
+.card__fieldset {
+  display: none; }
 
 .tabs__nav {
   display: none;
