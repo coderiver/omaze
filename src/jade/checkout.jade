@@ -100,19 +100,32 @@ html
 										.form__title BILLIING:
 									//- card
 									.form__card.card
-										.card__wrap
-											.card__preview
-												img.card__preview-pic(src="img/pay-systems/visa.svg", alt="")
-												//- img.card__preview-pic(src="img/card-cvv.svg", alt="")
-											.card__number.js-card-number-full
-												input.card__input.js-card-number(type="text", placeholder="XXXX XXXX XXXX XXXX")
+										.card__wrap.js-card-wrap
+											.card__preview.js-card-preview
+												.card__preview-front
+													//- img.card__preview-pic(src="img/pay-systems/visa.svg", alt="")
+												.card__preview-back
+													img.card__preview-pic(src="img/card-cvv.svg", alt="")
+											.card__number.card__number_full.js-card-number-full
+												.card__field
+													.card__field-label Credit Card #:
+													.card__field-wrap
+														input.card__input.input.js-card-number(type="text", placeholder="XXXX XXXX XXXX XXXX")
 											.card__fieldset.js-card-fieldset
 												.card__number.card__number_short
-													input.card__input.js-card-number-short(type="text", readonly)
+													.card__field
+														.card__field-wrap
+															input.card__input.input.js-card-number-short(type="text", readonly)
 												.card__date
-													input.card__input.js-card-date(type="text", placeholder="MM/YY")
+													.card__field
+														.card__field-label Expiration:
+														.card__field-wrap
+															input.card__input.input.js-card-date(type="text", placeholder="MM/YY")
 												.card__cvv
-													input.card__input.js-card-cvv(type="text", placeholder="CVV")
+													.card__field
+														.card__field-label CVV:
+														.card__field-wrap
+															input.card__input.input.js-card-cvv(type="text", placeholder="CVV")
 										.card__edit
 											a.card__edit-link(href="#") Enter card number for expiration date and CVV
 								.form__foot

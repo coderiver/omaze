@@ -102,21 +102,43 @@
                     <div class="form__title">BILLIING:</div>
                   </div>
                   <div class="form__card card">
-                    <div class="card__wrap">
-                      <div class="card__preview"><img src="img/pay-systems/visa.svg" alt="" class="card__preview-pic">
+                    <div class="card__wrap js-card-wrap">
+                      <div class="card__preview js-card-preview">
+                        <div class="card__preview-front">
+                        </div>
+                        <div class="card__preview-back"><img src="img/card-cvv.svg" alt="" class="card__preview-pic"></div>
                       </div>
-                      <div class="card__number js-card-number-full">
-                        <input type="text" placeholder="XXXX XXXX XXXX XXXX" class="card__input js-card-number">
+                      <div class="card__number card__number_full js-card-number-full">
+                        <div class="card__field">
+                          <div class="card__field-label">Credit Card #:</div>
+                          <div class="card__field-wrap">
+                            <input type="text" placeholder="XXXX XXXX XXXX XXXX" class="card__input input js-card-number">
+                          </div>
+                        </div>
                       </div>
                       <div class="card__fieldset js-card-fieldset">
                         <div class="card__number card__number_short">
-                          <input type="text" readonly class="card__input js-card-number-short">
+                          <div class="card__field">
+                            <div class="card__field-wrap">
+                              <input type="text" readonly class="card__input input js-card-number-short">
+                            </div>
+                          </div>
                         </div>
                         <div class="card__date">
-                          <input type="text" placeholder="MM/YY" class="card__input js-card-date">
+                          <div class="card__field">
+                            <div class="card__field-label">Expiration:</div>
+                            <div class="card__field-wrap">
+                              <input type="text" placeholder="MM/YY" class="card__input input js-card-date">
+                            </div>
+                          </div>
                         </div>
                         <div class="card__cvv">
-                          <input type="text" placeholder="CVV" class="card__input js-card-cvv">
+                          <div class="card__field">
+                            <div class="card__field-label">CVV:</div>
+                            <div class="card__field-wrap">
+                              <input type="text" placeholder="CVV" class="card__input input js-card-cvv">
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -562,6 +562,8 @@ a
 		+clr
 	&__paysys
 		float: right
+		+rm(1023)
+			display: none
 	&__fieldset
 		margin-bottom: 25px
 	&__fieldset_row
@@ -640,38 +642,90 @@ a
 
 .card
 	&__wrap
-		height: 42px
-		padding: 0 12px 
-		border: 1px solid $border
-		background: #FFF 
-		border-radius: 2px
 		+clr
+		+r(1022)
+			height: 42px
+			padding: 0 12px 
+			border: 1px solid $border
+			background: #FFF 
+			border-radius: 2px
+	&__wrap.is-active &__number_full
+		+r(1022)
+			display: none
+	&__wrap.is-active &__fieldset
+		+r(1022)
+			display: block
 	&__preview
+		position: relative
 		float: left
 		width: 33px
 		height: 22px
 		margin: 10px 12px 0 0
-		background: $border
 		border-radius: 2px 
 		font-size: 0
+		perspective: 1000
+		transform-style: preserve-3d
+		+rm(1023)
+			display: none
+		&.is-active &-front
+			transform: rotateY(-180deg)
+		&.is-active &-back
+			transform: rotateY(0deg)
+		&-front,
+		&-back
+			position: absolute
+			top: 0
+			left: 0
+			width: 33px
+			height: 22px
+			background: $border
+			border-radius: 2px
+			backface-visibility: hidden
+			transition: 0.6s
+			transform-style: preserve-3d
+		&-front
+			transform: rotateY(0deg)
+			z-index: 2
+		&-back
+			transform: rotateY(180deg)
+		&-pic
+			width: 33px
 	&__logo
 		width: 33px
 	&__number
 		overflow: hidden
+		&_full
+			+rm(1023)
+				float: left
+				width: 50%
+		&_short
+			float: left
+			width: 65px
+			+rm(1023)
+				display: none
 	&__input
 		width: 100%
 		height: 40px
 		+light
 		font-size: 18px
-	&__number_short
-		float: left
-		width: 65px
-	&__date
-		float: left
-		width: 65px
+		+r(1022)
+			border: none
+			padding: 0
+	&__field
+		&-label
+			display: none
+			margin-bottom: 5px
+			+extrabold
+			font-size: 20px
+			+rm(1023)
+				display: block
+	&__date,
 	&__cvv
 		float: left
 		width: 65px
+		+rm(1023)
+			width: 25%
+			padding-left: 20px 
 	&__edit
 		padding-top: 3px
 		&-link
@@ -683,6 +737,8 @@ a
 				text-decoration: none
 	&__fieldset
 		display: none
+		+rm(1023)
+			display: block
 
 .tabs
 	&__nav

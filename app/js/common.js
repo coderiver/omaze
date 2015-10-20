@@ -140,19 +140,19 @@ head.ready(function() {
 
 	// masks
 	(function () {
-		var number      = $('.js-card-number'),
+		var wrap        = $('.js-card-wrap'),
+			number      = $('.js-card-number'),
 			numberFull  = $('.js-card-number-full'),
 			numberShort = $('.js-card-number-short'),
 			date        = $('.js-card-date'),
 			cvv         = $('.js-card-cvv'),
-			fieldset    = $('.js-card-fieldset');
+			preview     = $('.js-card-preview');
 		if (number.length) {
 			number.mask('9999 9999 9999 9999', {
 				placeholder: "XXXX XXXX XXXX XXXX",
 				completed: function() {
 					var cep = $(this).val();
-					fieldset.show();
-					numberFull.hide();
+					wrap.addClass('is-active');
 					numberShort.val(cep.substring(15));
 					date.focus();
 				}
@@ -169,6 +169,12 @@ head.ready(function() {
 		if (cvv.length) {
 			cvv.mask('999', {
 				placeholder: "CVV"
+			});
+			cvv.on('focus', function () {
+				preview.addClass('is-active');
+			});
+			cvv.on('blur', function () {
+				preview.removeClass('is-active');
 			});
 		};
 	}());
