@@ -874,6 +874,9 @@ a {
       width: 50%;
       padding: 0 10px; } }
   @media only screen and (min-width: 1023px) {
+    .form__option_lg {
+      width: 100%; } }
+  @media only screen and (min-width: 1023px) {
     .form__field_wide {
       width: 100%; } }
   @media only screen and (min-width: 1023px) {
@@ -882,28 +885,29 @@ a {
   @media only screen and (min-width: 1023px) {
     .form__field_sm {
       width: 35%; } }
-  @media only screen and (min-width: 1023px) {
-    .form__btn,
-    .form__option_lg {
-      width: 100%; } }
+  .form__btn {
+    width: 100%; }
   .form__or {
+    padding: 10px 0;
     font-size: 20px;
     text-transform: uppercase;
     text-align: center; }
     @media only screen and (min-width: 1023px) {
       .form__or {
         display: none; } }
-  .form__row {
-    margin: 0 -10px;
-    *zoom: 1; }
-    .form__row:after {
-      content: " ";
-      display: table;
-      clear: both; }
-  .form__col {
-    float: left;
-    width: 50%;
-    padding: 0 10px; }
+  @media only screen and (min-width: 1023px) {
+    .form__row {
+      margin: 0 -10px;
+      *zoom: 1; }
+      .form__row:after {
+        content: " ";
+        display: table;
+        clear: both; } }
+  @media only screen and (min-width: 1023px) {
+    .form__col {
+      float: left;
+      width: 50%;
+      padding: 0 10px; } }
 
 .field {
   margin-bottom: 5px; }
