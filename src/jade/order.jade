@@ -14,49 +14,6 @@ html
 				.popup__center.center
 					.popup__in
 						button.popup__close x
-						.popup__section
-							//- form
-							.form
-								.form__title ORDER SUMMARY:
-								.form__fieldset.form__fieldset_row
-									//- field
-									.form__field.field
-										.field__label Style:
-										.field__wrap
-											//- select
-											.select
-												.select__head Men’s T-Shirt - $18
-												select.select__el.js-select
-													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
-									//- field
-									.form__field.field
-										.field__label Size:
-										.field__wrap
-											//- select
-											.select
-												.select__head Large
-												select.select__el.js-select
-													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
-									//- field
-									.form__field.field
-										.field__label Color:
-										.field__wrap
-											//- select
-											.select
-												.select__head Heather Grey
-												select.select__el.js-select
-													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
-								.form__foot
-									button.form__btn.btn(disabled) CONFIRM ORDER
-									button.form__btn.btn PAY $36 + $4 SHIPPING
-									button.form__btn.btn.btn_white PAY WITH
-										img.btn__paypal(src="img/pay-systems/paypal.svg", alt="")
 						.popup__aside
 							//- back
 							.back
@@ -73,6 +30,61 @@ html
 											.order__name Men’s T-Shirt
 											.order__options Heather Grey - L
 											a.order__edit(href="#") tap to edit
+						.popup__section
+							//- form
+							.form
+								.form__fieldset.form__fieldset_row
+									//- field
+									.form__field.field.field_style
+										.field__label Style:
+										.field__wrap
+											//- select
+											.select
+												.select__head Men’s T-Shirt - $18
+												select.select__el.js-select
+													option Men’s T-Shirt - $18
+													option Men’s T-Shirt - $18
+													option Men’s T-Shirt - $18
+									//- option
+									.form__option.option
+										.option__title COLOR
+											span.option__selected - Heather Grey
+										.option__list
+											label.option__item
+												input.option__input(type="radio", name="opt1", checked)
+												span.option__var 
+													img.option__pic(src="img/texture.jpg", alt="")
+											label.option__item
+												input.option__input(type="radio", name="opt1")
+												span.option__var 
+													img.option__pic(src="img/texture.jpg", alt="")
+									//- option
+									.form__option.option
+										.option__title size
+											span.option__selected - Large
+										.option__list
+											label.option__item
+												input.option__input(type="radio", name="opt2", checked)
+												span.option__var 
+													span.option__size S
+											label.option__item
+												input.option__input(type="radio", name="opt2",)
+												span.option__var 
+													span.option__size M
+											label.option__item
+												input.option__input(type="radio", name="opt2",)
+												span.option__var 
+													span.option__size L
+											label.option__item
+												input.option__input(type="radio", name="opt2",)
+												span.option__var 
+													span.option__size XL
+											label.option__item
+												input.option__input(type="radio", name="opt2",)
+												span.option__var 
+													span.option__size XXL
+							//- order
+							.order
 								.order__stats
 									.order__stats-value $3.00
 									.order__stats-title Subtotal:
@@ -82,6 +94,13 @@ html
 								.order__stats.order__stats_total
 									.order__stats-value $43.00
 									.order__stats-title TOTAL:
+							//- form
+							.form
+								.form__foot
+									button.form__btn.btn PAY WITH CARD
+									.form__or - or -
+									button.form__btn.btn.btn_white PAY WITH
+										img.btn__paypal(src="img/pay-systems/paypal.svg", alt="")
 
 		//- scripts
 		script(src='js/lib/head.js', data-headjs-load='js/init.js')

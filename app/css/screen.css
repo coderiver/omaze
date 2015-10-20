@@ -883,6 +883,10 @@ a {
       width: 35%; } }
   .form__btn {
     width: 100%; }
+  .form__or {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center; }
 
 .field {
   margin-bottom: 5px; }
@@ -896,6 +900,12 @@ a {
   .field__label_hidden,
   .field__wrap_hidden {
     display: none; }
+  .field_style {
+    margin-bottom: 20px; }
+  .field_style .field__label {
+    font-family: "National-Extrabold", Arial, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase; }
 
 .input {
   width: 100%;
@@ -1624,13 +1634,10 @@ a {
         position: absolute;
         top: 0;
         right: 0;
-        bottom: 0;
-        width: 50%;
-        background: #F1F2F2; } }
-    @media only screen and (min-width: 767px) {
-      .popup__in:before {
         left: 290px;
-        width: auto; } }
+        bottom: 0;
+        width: auto;
+        background: #F1F2F2; } }
   .popup__close {
     display: none;
     position: absolute;
@@ -1650,23 +1657,23 @@ a {
   .popup__section,
   .popup__aside {
     position: relative;
-    padding: 35px 25px 30px;
+    padding: 20px 10px;
     z-index: 2; }
+    @media only screen and (min-width: 719px) {
+      .popup__section,
+      .popup__aside {
+        padding: 35px 25px 30px; } }
   @media only screen and (min-width: 719px) {
     .popup__section {
       float: right;
-      width: 50%; } }
-  @media only screen and (min-width: 767px) {
-    .popup__section {
       width: 100%;
       margin-left: -290px;
       padding-left: 320px; } }
   @media only screen and (min-width: 719px) {
     .popup__aside {
+      float: left;
+      width: 290px;
       overflow: hidden; } }
-  @media only screen and (min-width: 767px) {
-    .popup__aside {
-      max-width: 290px; } }
 
 .order {
   padding-bottom: 50px; }
