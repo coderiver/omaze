@@ -1012,8 +1012,13 @@ a {
   .card__preview-back {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg); }
+  .card__preview-back .card__preview-pic {
+    display: block; }
   .card__preview-pic {
+    display: none;
     width: 33px; }
+    .card__preview-pic.is-active {
+      display: block; }
 
 .card__logo {
   width: 33px; }

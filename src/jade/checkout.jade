@@ -103,29 +103,32 @@ html
 										.card__wrap.js-card-wrap
 											.card__preview.js-card-preview
 												.card__preview-front
-													//- img.card__preview-pic(src="img/pay-systems/visa.svg", alt="")
+													img.card__preview-pic.js-card-item.js-card-visa(src="img/pay-systems/visa.svg", alt="")
+													img.card__preview-pic.js-card-item.js-card-mastercard(src="img/pay-systems/mastercard.svg", alt="")
+													img.card__preview-pic.js-card-item.js-card-amex(src="img/pay-systems/amex.svg", alt="")
+													img.card__preview-pic.js-card-item.js-card-discover(src="img/pay-systems/discover.svg", alt="")
 												.card__preview-back
 													img.card__preview-pic(src="img/card-cvv.svg", alt="")
 											.card__number.card__number_full.js-card-number-full
 												.card__field
 													.card__field-label Credit Card #:
 													.card__field-wrap
-														input.card__input.input.js-card-number(type="text", placeholder="XXXX XXXX XXXX XXXX")
+														input.card__input.input.js-card-number(type="text")
 											.card__fieldset.js-card-fieldset
 												.card__number.card__number_short
 													.card__field
 														.card__field-wrap
-															input.card__input.input.js-card-number-short(type="text", readonly)
+															input.card__input.input.js-card-number-short(type="text")
 												.card__date
 													.card__field
 														.card__field-label Expiration:
 														.card__field-wrap
-															input.card__input.input.js-card-date(type="text", placeholder="MM/YY")
+															input.card__input.input.js-card-date(type="text")
 												.card__cvv
 													.card__field
 														.card__field-label CVV:
 														.card__field-wrap
-															input.card__input.input.js-card-cvv(type="text", placeholder="CVV")
+															input.card__input.input.js-card-cvv(type="text")
 										.card__edit
 											a.card__edit-link(href="#") Enter card number for expiration date and CVV
 								.form__foot

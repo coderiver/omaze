@@ -146,29 +146,38 @@ head.ready(function() {
 			numberShort = $('.js-card-number-short'),
 			date        = $('.js-card-date'),
 			cvv         = $('.js-card-cvv'),
-			preview     = $('.js-card-preview');
-		if (number.length) {
-			number.mask('9999 9999 9999 9999', {
-				placeholder: "XXXX XXXX XXXX XXXX",
-				completed: function() {
-					var cep = $(this).val();
+			preview     = $('.js-card-preview'),
+			item        = $('.js-card-item'),
+			visa        = $('.js-card-visa'),
+			mastercard  = $('.js-card-mastercard'),
+			amex        = $('.js-card-amex'),
+			discover    = $('.js-card-discover');
+		if (wrap.length) {
+			number.mask('0000 0000 0000 0000', {
+				placeholder: 'XXXX XXXX XXXX XXXX',
+				onComplete: function (cep) {
 					wrap.addClass('is-active');
 					numberShort.val(cep.substring(15));
 					date.focus();
+				},
+				onKeyPress: function (cep, e, field, options) {
+					getCreditCardType(cep);
 				}
 			});
-		};
-		if (date.length) {
-			date.mask('99/99', {
-				placeholder: "MM/YY",
-				completed: function () {
+			numberShort.on('focus', function () {
+				wrap.removeClass('is-active');
+				number.focus();
+			});
+			// date
+			date.mask('00/00', {
+				placeholder: 'MM/YY',
+				onComplete: function () {
 					cvv.focus();
 				}
 			});
-		};
-		if (cvv.length) {
-			cvv.mask('999', {
-				placeholder: "CVV"
+			// cvv
+			cvv.mask('000', {
+				placeholder: 'CVV'
 			});
 			cvv.on('focus', function () {
 				preview.addClass('is-active');
@@ -177,6 +186,37 @@ head.ready(function() {
 				preview.removeClass('is-active');
 			});
 		};
+		function getCreditCardType (accountNumber){
+			//start without knowing the credit card type
+			item.removeClass('is-active');
+			//first check for MasterCard
+			if (/^5[1-5]/.test(accountNumber)) {
+				item.removeClass('is-active');
+				mastercard.addClass('is-active');
+			}
+			//then check for Visa
+			else if (/^4/.test(accountNumber)) {
+				item.removeClass('is-active');
+				visa.addClass('is-active');
+			}
+			//then check for AmEx
+			else if (/^3[47]/.test(accountNumber)) {
+				item.removeClass('is-active');
+				amex.addClass('is-active');
+				number.mask('0000 0000 0000 000', {
+					onComplete: function (cep) {
+						wrap.addClass('is-active');
+						numberShort.val(cep.substring(15));
+						date.focus();
+					}
+				});
+			}
+			//then check for Discover
+			else if (/^(6011|622(12[6-9]|1[3-9][0-9]|[2-8][0-9]{2}|9[0-1][0-9]|92[0-5]|64[4-9])|65)/.test(accountNumber)) {
+				item.removeClass('is-active');
+				discover.addClass('is-active');
+			}
+		}
 	}());
 
 	// select

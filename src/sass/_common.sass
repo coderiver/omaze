@@ -698,8 +698,13 @@ a
 			z-index: 2
 		&-back
 			transform: rotateY(180deg)
+		&-back &-pic
+			display: block
 		&-pic
+			display: none
 			width: 33px
+			&.is-active
+				display: block
 	&__logo
 		width: 33px
 	&__number
