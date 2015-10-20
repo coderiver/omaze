@@ -59,7 +59,7 @@ html
 												span.option__var 
 													img.option__pic(src="img/texture.jpg", alt="")
 									//- option
-									.form__option.option
+									.form__option.form__option_lg.option
 										.option__title size
 											span.option__selected - Large
 										.option__list
@@ -84,7 +84,7 @@ html
 												span.option__var 
 													span.option__size XXL
 							//- order
-							.order
+							.order.order_form
 								.order__stats
 									.order__stats-value $3.00
 									.order__stats-title Subtotal:
@@ -97,10 +97,14 @@ html
 							//- form
 							.form
 								.form__foot
-									button.form__btn.btn PAY WITH CARD
-									.form__or - or -
-									button.form__btn.btn.btn_white PAY WITH
-										img.btn__paypal(src="img/pay-systems/paypal.svg", alt="")
+									.form__row
+										.form__col
+											button.form__btn.btn PAY WITH CARD
+										.form__or - or -
+										.form__col
+											button.form__btn.btn.btn_white
+												span.btn__title PAY WITH
+												img.btn__pic(src="img/pay-systems/paypal.svg", alt="")
 
 		//- scripts
 		script(src='js/lib/head.js', data-headjs-load='js/init.js')

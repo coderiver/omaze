@@ -868,7 +868,8 @@ a {
         display: table;
         clear: both; } }
   @media only screen and (min-width: 1023px) {
-    .form__field {
+    .form__field,
+    .form__option {
       float: left;
       width: 50%;
       padding: 0 10px; } }
@@ -881,12 +882,28 @@ a {
   @media only screen and (min-width: 1023px) {
     .form__field_sm {
       width: 35%; } }
-  .form__btn {
-    width: 100%; }
+  @media only screen and (min-width: 1023px) {
+    .form__btn,
+    .form__option_lg {
+      width: 100%; } }
   .form__or {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center; }
+    @media only screen and (min-width: 1023px) {
+      .form__or {
+        display: none; } }
+  .form__row {
+    margin: 0 -10px;
+    *zoom: 1; }
+    .form__row:after {
+      content: " ";
+      display: table;
+      clear: both; }
+  .form__col {
+    float: left;
+    width: 50%;
+    padding: 0 10px; }
 
 .field {
   margin-bottom: 5px; }
@@ -930,11 +947,19 @@ a {
   .btn:disabled {
     background: #BCBDC0;
     cursor: not-allowed; }
-  .btn__paypal {
+  .btn__pic,
+  .btn__title {
+    display: inline-block;
+    vertical-align: middle; }
+  .btn__pic {
+    margin-left: 10px;
     width: 105px; }
   .btn_white {
     background: #FFF;
+    border: 1px solid #cccdd0;
     color: #231F20; }
+    .btn_white:hover {
+      background: #fff; }
 
 .paysys {
   font-size: 0; }
@@ -1746,6 +1771,11 @@ a {
     .order__id-number {
       margin-right: 5px;
       font-family: "National-Bold", Arial, sans-serif; }
+  @media only screen and (min-width: 1023px) {
+    .order_form {
+      width: 50%;
+      margin-left: 50%;
+      padding-left: 10px; } }
 
 .thank {
   margin-bottom: 65px;

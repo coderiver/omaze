@@ -570,7 +570,8 @@ a
 		+rm(1023)
 			margin: 0 -10px 40px
 			+clr
-	&__field
+	&__field,
+	&__option
 		+rm(1023)
 			float: left
 			width: 50%
@@ -584,12 +585,23 @@ a
 	&__field_sm
 		+rm(1023)
 			width: 35%
-	&__btn
-		width: 100%
+	&__btn,
+	&__option_lg
+		+rm(1023)
+			width: 100%
 	&__or
 		font-size: 20px
 		text-transform: uppercase
 		text-align: center
+		+rm(1023)
+			display: none
+	&__row
+		margin: 0 -10px
+		+clr
+	&__col
+		float: left
+		width: 50%
+		padding: 0 10px
 
 .field
 	margin-bottom: 5px
@@ -633,11 +645,19 @@ a
 	&:disabled
 		background: #BCBDC0
 		cursor: not-allowed
-	&__paypal
+	&__pic,
+	&__title
+		display: inline-block
+		vertical-align: middle
+	&__pic
+		margin-left: 10px
 		width: 105px
 	&_white	
 		background: #FFF
-		color: $black 
+		border: 1px solid $border
+		color: $black
+		&:hover
+			background: #fff
 
 .paysys
 	font-size: 0
@@ -1347,6 +1367,11 @@ a
 		&-number
 			margin-right: 5px
 			+bold
+	&_form
+		+rm(1023)
+			width: 50%
+			margin-left: 50%
+			padding-left: 10px
 
 .thank
 	margin-bottom: 65px
