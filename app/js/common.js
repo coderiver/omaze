@@ -186,7 +186,7 @@ head.ready(function() {
 				preview.removeClass('is-active');
 			});
 			preview.on('click', function () {
-				wrap.removeClass('is-active');
+				wrap.toggleClass('is-active');
 			});
 		};
 		function getCreditCardType (accountNumber){
