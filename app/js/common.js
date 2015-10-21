@@ -185,6 +185,9 @@ head.ready(function() {
 			cvv.on('blur', function () {
 				preview.removeClass('is-active');
 			});
+			preview.on('click', function () {
+				wrap.removeClass('is-active');
+			});
 		};
 		function getCreditCardType (accountNumber){
 			//start without knowing the credit card type
