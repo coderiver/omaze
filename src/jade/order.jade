@@ -13,76 +13,139 @@ html
 				//- center
 				.popup__center.center
 					.popup__in
-						button.popup__close x
 						.popup__aside
 							//- back
 							.back
 								a.back__link(href="#")
 									i.icon.icon-arrow-back
 									span.back__title Back to campaign
-							//- order
-							.order
-								.order__list
-									.order__item
-										.order__preview
-											img.order__pic(src="img/product.jpg", alt="")
-										.order__info
-											.order__name Men’s T-Shirt
-											.order__options Heather Grey - L
-											a.order__edit(href="#") tap to edit
+						.popup__row.js-product
+							.popup__aside
+								//- order
+								.order.order_single
+									.order__list
+										.order__item
+											.order__info
+												.order__name Men’s T-Shirt
+												.order__options Heather Grey - L
+												a.order__edit.js-product-btn(href="#", data-text-edit="tap to edit", data-text-close="close options") tap to edit
+											.order__preview
+												img.order__pic(src="img/product.jpg", alt="")
+											button.order__close x
+							.popup__section
+								//- form
+								.form.form_change.js-product-form
+									button.form__close x
+									.form__fieldset.form__fieldset_row
+										//- field
+										.form__field.form__field_sm.field.field_style
+											.field__label Style:
+											.field__wrap
+												//- select
+												.select
+													.select__head Men’s T-Shirt - $18
+													select.select__el.js-select
+														option Men’s T-Shirt - $18
+														option Men’s T-Shirt - $18
+														option Men’s T-Shirt - $18
+										//- option
+										.form__option.form__option_sm.option.option_sm
+											.option__title COLOR
+												span.option__selected - Heather Grey
+											.option__list
+												label.option__item
+													input.option__input(type="radio", name="opt1", checked)
+													span.option__var 
+														img.option__pic(src="img/texture.jpg", alt="")
+												label.option__item
+													input.option__input(type="radio", name="opt1")
+													span.option__var 
+														img.option__pic(src="img/texture.jpg", alt="")
+										//- option
+										.form__option.form__option_md.option.option_sm
+											.option__title size
+												span.option__selected - Large
+											.option__list
+												label.option__item
+													input.option__input(type="radio", name="opt2", checked)
+													span.option__var 
+														span.option__size M
+												label.option__item
+													input.option__input(type="radio", name="opt2")
+													span.option__var 
+														span.option__size L
+												label.option__item
+													input.option__input(type="radio", name="opt2")
+													span.option__var 
+														span.option__size XL
+												label.option__item
+													input.option__input(type="radio", name="opt2")
+													span.option__var 
+														span.option__size XXL
+						.popup__row.js-product
+							.popup__aside
+								//- order
+								.order.order_single
+									.order__list
+										.order__item
+											.order__info
+												.order__name Men’s T-Shirt
+												.order__options Heather Grey - L
+												a.order__edit.js-product-btn(href="#", data-text-edit="tap to edit", data-text-close="close options") tap to edit
+											.order__preview
+												img.order__pic(src="img/product.jpg", alt="")
+											button.order__close x
+							.popup__section
+								//- form
+								.form.form_change.js-product-form
+									button.form__close x
+									.form__fieldset.form__fieldset_row
+										//- field
+										.form__field.form__field_sm.field.field_style
+											.field__label Style:
+											.field__wrap
+												//- select
+												.select
+													.select__head Men’s T-Shirt - $18
+													select.select__el.js-select
+														option Men’s T-Shirt - $18
+														option Men’s T-Shirt - $18
+														option Men’s T-Shirt - $18
+										//- option
+										.form__option.form__option_sm.option.option_sm
+											.option__title COLOR
+												span.option__selected - Heather Grey
+											.option__list
+												label.option__item
+													input.option__input(type="radio", name="opt3", checked)
+													span.option__var 
+														img.option__pic(src="img/texture.jpg", alt="")
+												label.option__item
+													input.option__input(type="radio", name="opt3")
+													span.option__var 
+														img.option__pic(src="img/texture.jpg", alt="")
+										//- option
+										.form__option.form__option_md.option.option_sm
+											.option__title size
+												span.option__selected - Large
+											.option__list
+												label.option__item
+													input.option__input(type="radio", name="opt4", checked)
+													span.option__var 
+														span.option__size M
+												label.option__item
+													input.option__input(type="radio", name="opt4")
+													span.option__var 
+														span.option__size L
+												label.option__item
+													input.option__input(type="radio", name="opt4")
+													span.option__var 
+														span.option__size XL
+												label.option__item
+													input.option__input(type="radio", name="opt4")
+													span.option__var 
+														span.option__size XXL
 						.popup__section
-							//- form
-							.form
-								.form__fieldset.form__fieldset_row
-									//- field
-									.form__field.field.field_style
-										.field__label Style:
-										.field__wrap
-											//- select
-											.select
-												.select__head Men’s T-Shirt - $18
-												select.select__el.js-select
-													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
-													option Men’s T-Shirt - $18
-									//- option
-									.form__option.option
-										.option__title COLOR
-											span.option__selected - Heather Grey
-										.option__list
-											label.option__item
-												input.option__input(type="radio", name="opt1", checked)
-												span.option__var 
-													img.option__pic(src="img/texture.jpg", alt="")
-											label.option__item
-												input.option__input(type="radio", name="opt1")
-												span.option__var 
-													img.option__pic(src="img/texture.jpg", alt="")
-									//- option
-									.form__option.form__option_lg.option
-										.option__title size
-											span.option__selected - Large
-										.option__list
-											label.option__item
-												input.option__input(type="radio", name="opt2", checked)
-												span.option__var 
-													span.option__size S
-											label.option__item
-												input.option__input(type="radio", name="opt2",)
-												span.option__var 
-													span.option__size M
-											label.option__item
-												input.option__input(type="radio", name="opt2",)
-												span.option__var 
-													span.option__size L
-											label.option__item
-												input.option__input(type="radio", name="opt2",)
-												span.option__var 
-													span.option__size XL
-											label.option__item
-												input.option__input(type="radio", name="opt2",)
-												span.option__var 
-													span.option__size XXL
 							//- order
 							.order.order_form
 								.order__stats
@@ -105,6 +168,14 @@ html
 											button.form__btn.btn.btn_white
 												span.btn__title PAY WITH
 												img.btn__pic(src="img/pay-systems/paypal.svg", alt="")
-
+									//- secure
+									.secure
+										.secure__wrap
+											.secure__icon
+												i.icon.icon-lock
+											.secure__title Payments are secured with 128-bit encryption
+										.secure__text By continuing, you agree to our
+										.secure__terms
+											a.secure__terms-link(href="#") Purchaser Terms & Conditions
 		//- scripts
 		script(src='js/lib/head.js', data-headjs-load='js/init.js')

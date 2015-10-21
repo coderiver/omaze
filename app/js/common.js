@@ -258,5 +258,33 @@ head.ready(function() {
 			}
 		});
 	}());
+
+	// product
+	(function () {
+		var product = $('.js-product');
+		if (product.length) {
+			product.each(function () {
+				var _this = $(this),
+					btn   = _this.find('.js-product-btn'),
+					form  = _this.find('.js-product-form');
+				btn.on('click', function () {
+					var _this = $(this),
+						textEdit  = _this.data('text-edit'),
+						textClose = _this.data('text-close');
+					if (_this.hasClass('is-active')) {
+						_this.removeClass('is-active');
+						_this.text(textEdit);
+						form.removeClass('is-active');
+					}
+					else {
+						_this.addClass('is-active');
+						_this.text(textClose);
+						form.addClass('is-active');
+					}
+					return false;
+				});
+			});
+		};
+	}());
 	
 });

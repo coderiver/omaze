@@ -488,8 +488,8 @@ a
 			position: absolute
 			top: -1px
 			left: -1px
-			width: 56px
-			height: 56px
+			right: -1px
+			bottom: -1px
 			border: 3px solid $blue
 			border-radius: 50%
 			z-index: 2 
@@ -506,7 +506,19 @@ a
 		background: linear-gradient(#f0f0f1, #e3e4e5)
 		text-align: center
 		line-height: 52px
-		font-size: 22px 
+		font-size: 22px
+	&_sm &__title
+		margin-bottom: 5px
+	&_sm &__pic
+		+rm(1023)
+			width: 42px
+			height: 42px
+	&_sm &__size
+		+rm(1023)
+			width: 42px
+			height: 42px
+			line-height: 40px
+			font-size: 18px
 		
 .select
 	position: relative
@@ -576,9 +588,12 @@ a
 			float: left
 			width: 50%
 			padding: 0 10px
-	&__option_lg
+	&__option_sm
 		+rm(1023)
-			width: 100%
+			width: 30%
+	&__option_md
+		+rm(1023)
+			width: 35%
 	&__field_wide
 		+rm(1023)
 			width: 100%
@@ -606,6 +621,43 @@ a
 			float: left
 			width: 50%
 			padding: 0 10px
+	&__close
+		display: none
+		position: absolute
+		top: 33px
+		right: -5px
+		width: 30px
+		background: #FFF
+		border-radius: 50%
+		+extrabold
+		font-size: 22px
+		line-height: 30px
+		+rm(719)
+			display: block
+	&_change
+		display: none
+		position: relative
+		margin: 0
+		&.is-active
+			display: block
+		+r(718)
+			padding: 10px
+			border: 1px solid $border
+			border-radius: 5px
+		+rm(719)
+			display: block
+			padding-right: 30px
+			&:after
+				content: ""
+				position: absolute
+				top: 30px
+				left: -50px
+				+arr(20,40,#F1F2F2,l)
+	&_change &__option
+		&:last-child
+			margin: 0
+	&_change &__fieldset
+		margin: 0
 
 .field
 	margin-bottom: 5px
@@ -661,7 +713,7 @@ a
 		border: 1px solid $border
 		color: $black
 		&:hover
-			background: #fff
+			background: $gray-light
 
 .paysys
 	font-size: 0
@@ -767,13 +819,12 @@ a
 			padding-left: 20px 
 	&__edit
 		padding-top: 3px
-		&-link
-			+lightitalic
-			text-decoration: underline
-			font-size: 14px
-			color: $gray-dark 
-			&:hover
-				text-decoration: none
+		+lightitalic
+		text-decoration: underline
+		font-size: 14px
+		color: $gray-dark 
+		+rm(1023)
+			display: none
 	&__fieldset
 		display: none
 		+rm(1023)
@@ -1294,20 +1345,24 @@ a
 		z-index: 10
 		+rm(719)
 			display: block
+	&__row
+		clear: both
+		+clr
 	&__section,
 	&__aside
 		position: relative
-		padding: 20px 10px
-		z-index: 2
+		padding: 10px
 		+rm(719)
 			padding: 35px 25px 30px
 	&__section
+		z-index: 2
 		+rm(719)
 			float: right
 			width: 100%
 			margin-left: -290px
 			padding-left: 320px 
 	&__aside
+		z-index: 4 
 		+rm(719)
 			float: left
 			width: 290px
@@ -1324,17 +1379,30 @@ a
 		+lightitalic
 		color: $pink
 	&__item
+		position: relative
 		margin-bottom: 20px
 		+clr
 	&__preview
 		float: left
 		width: 70px
-		margin-right: 20px
 	&__pic
 		display: block
 		max-width: 100%
 	&__info
-		overflow: hidden
+		float: right
+		width: 100%
+		margin-left: -90px
+		padding: 0 20px 0 90px
+	&__close
+		position: absolute
+		top: -5px
+		right: 0
+		width: 20px
+		+extrabold
+		font-size: 22px
+		line-height: 30px
+		+rm(719)
+			display: none
 	&__name
 		+extrabold
 		font-size: 18px
@@ -1371,11 +1439,36 @@ a
 		&-number
 			margin-right: 5px
 			+bold
+	&__edit
+		color: $pink
+		+rm(719)
+			display: none
 	&_form
 		+rm(1023)
 			width: 50%
 			margin-left: 50%
 			padding-left: 10px
+	&_single
+		padding: 0
+	&_single &__item
+		margin: 0
+	&_single &__preview
+		+rm(719)
+			float: none
+			width: 100%
+			margin: 0
+	&_single &__info
+		+rm(719)
+			float: none
+			margin: 0 0 20px
+			padding: 0
+			text-align: center
+	&_single &__name
+		+rm(719)
+			font-size: 24px
+	&_single &__options
+		+rm(719)
+			font-size: 18px
 
 .thank
 	margin-bottom: 65px
@@ -1412,4 +1505,21 @@ a
 		padding-top: 25px
 		background: #F5F5F7 
 
-
+.secure
+	margin-top: 30px
+	+lightitalic
+	font-size: 14px
+	text-align: center
+	&__wrap
+		margin-bottom: 10px
+		font-size: 0
+	&__icon,
+	&__title
+		display: inline-block
+		vertical-align: middle
+	&__icon
+		margin-right: 10px
+		.icon
+			font-size: 14px
+	&__title
+		font-size: 14px
