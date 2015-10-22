@@ -167,8 +167,23 @@ head.ready(function() {
 						type = getCreditCardType(cep);
 					mask = (type == 'amex') ? masks[1] : masks[0];
 					flag = (type == 'amex') ? 0 : 1;
-					console.log(flag);
 					number.mask(mask, options);
+					if (type == 'mastercard') {
+						item.removeClass('is-active');
+						mastercard.addClass('is-active');
+					};
+					if (type == 'visa') {
+						item.removeClass('is-active');
+						visa.addClass('is-active');
+					};
+					if (type == 'amex') {
+						item.removeClass('is-active');
+						amex.addClass('is-active');
+					};
+					if (type == 'discover') {
+						item.removeClass('is-active');
+						discover.addClass('is-active');
+					};
 				}
 			};
 			number.mask('0000 0000 0000 0000', numberOptions);
