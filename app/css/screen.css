@@ -378,6 +378,49 @@ a {
       .header__logo {
         margin-top: 21px;
         font-size: 31px; } }
+  @media only screen and (max-width: 766px) {
+    .header_campaign {
+      margin-bottom: -68px;
+      padding: 0;
+      border: none; } }
+  @media only screen and (max-width: 766px) {
+    .header_campaign .header__logo {
+      display: none; } }
+
+.main {
+  height: 300px;
+  padding-top: 150px;
+  background: url(../img/bg-main-sm.jpg) no-repeat 50% 50%/cover;
+  margin-bottom: 40px;
+  text-align: center; }
+  @media only screen and (min-width: 719px) {
+    .main {
+      height: 470px;
+      margin: -70px 0 65px;
+      background: url(../img/bg-main.jpg) no-repeat 50% 50%/cover;
+      text-align: left; } }
+  .main__logo {
+    font-family: "Nevis", Arial, sans-serif;
+    font-size: 45px;
+    color: #f3f2f3;
+    letter-spacing: -2px;
+    text-decoration: none;
+    line-height: 1; }
+    @media only screen and (min-width: 719px) {
+      .main__logo {
+        display: none; } }
+    .main__logo-white {
+      color: #fff; }
+  .main__title {
+    font-family: "National-LightItalic", Arial, sans-serif;
+    font-size: 17px;
+    color: #fff; }
+    @media only screen and (min-width: 719px) {
+      .main__title {
+        width: 400px;
+        font-family: "National-Extrabold", Arial, sans-serif;
+        font-size: 48px;
+        line-height: 1; } }
 
 .nav {
   float: right;
@@ -420,6 +463,9 @@ a {
     text-decoration: none; }
     .nav__link:first-child {
       margin: 0; }
+  @media only screen and (max-width: 766px) {
+    .nav_white .nav__btn {
+      color: #FFF; } }
 
 .content {
   margin-bottom: 30px;
@@ -1945,5 +1991,121 @@ a {
       font-size: 14px; }
   .secure__title {
     font-size: 14px; }
+
+.campaigns {
+  text-align: center; }
+  .campaigns__title {
+    margin-bottom: 35px;
+    font-size: 16px;
+    letter-spacing: 2px; }
+    @media only screen and (min-width: 719px) {
+      .campaigns__title {
+        font-family: "National-Regular", Arial, sans-serif;
+        margin-bottom: 60px;
+        font-size: 26px; } }
+  .campaigns__list {
+    margin-bottom: 20px;
+    font-size: 0; }
+  .campaigns__col {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 40px;
+    vertical-align: top; }
+    @media only screen and (min-width: 719px) {
+      .campaigns__col {
+        width: 50%;
+        margin-bottom: 80px; } }
+    @media only screen and (min-width: 1023px) {
+      .campaigns__col {
+        width: 33.33%; } }
+  .campaigns__item {
+    margin: 0 auto; }
+
+.how__title {
+  margin-bottom: 20px;
+  font-family: "National-Extrabold", Arial, sans-serif;
+  font-size: 28px;
+  text-align: center; }
+  @media only screen and (min-width: 767px) {
+    .how__title {
+      margin-bottom: 30px;
+      font-size: 38px; } }
+
+.how__list {
+  position: relative;
+  padding: 60px 0 30px;
+  background: #F5F5F7;
+  font-size: 0; }
+  @media only screen and (min-width: 767px) {
+    .how__list {
+      padding: 70px 0 15px; } }
+  .how__list:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -20px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 20px 0 20px;
+    border-color: #fff transparent transparent transparent; }
+
+.how__item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 25px;
+  vertical-align: top; }
+  @media only screen and (min-width: 767px) {
+    .how__item {
+      width: 46%;
+      margin-bottom: 55px; }
+      .how__item:nth-child(2n) {
+        margin-left: 8%; } }
+
+.how__type {
+  padding-left: 60px;
+  font-family: "National-Extrabold", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-transform: uppercase; }
+  @media only screen and (min-width: 767px) {
+    .how__type {
+      margin-bottom: 15px;
+      font-size: 20px; } }
+
+.how__info {
+  *zoom: 1; }
+  .how__info:after {
+    content: " ";
+    display: table;
+    clear: both; }
+
+.how__icon {
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin: 0 15px 0 0;
+  background: #2BC1D6;
+  border-radius: 50%;
+  color: #FFF;
+  text-align: center;
+  font-size: 0; }
+  .how__icon:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%; }
+  .how__icon .icon {
+    font-size: 26px;
+    vertical-align: middle; }
+
+.how__text {
+  display: table;
+  font-size: 15px; }
+  @media only screen and (min-width: 719px) {
+    .how__text {
+      font-size: 18px; } }
 
 /*# sourceMappingURL=screen.css.map */
