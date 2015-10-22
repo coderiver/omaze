@@ -151,7 +151,8 @@ head.ready(function() {
 			visa        = $('.js-card-visa'),
 			mastercard  = $('.js-card-mastercard'),
 			amex        = $('.js-card-amex'),
-			discover    = $('.js-card-discover');
+			discover    = $('.js-card-discover'),
+			flag        = 0;
 		if (wrap.length) {
 
 			var numberOptions =  {
@@ -165,6 +166,8 @@ head.ready(function() {
 					var masks = ['0000 0000 0000 0000', '0000 000000 00000'],
 						type = getCreditCardType(cep);
 					mask = (type == 'amex') ? masks[1] : masks[0];
+					flag = (type == 'amex') ? 0 : 1;
+					console.log(flag);
 					number.mask(mask, options);
 				}
 			};
@@ -180,11 +183,21 @@ head.ready(function() {
 				placeholder: 'MM/YY',
 				onComplete: function () {
 					cvv.focus();
+				},
+				onKeyPress: function (cep, e, field, options) {
+					if (cep.length == 2) {
+						field.val(cep + '/');
+					};
 				}
 			});
 			// cvv
 			cvv.mask('000', {
-				placeholder: 'CVV'
+				placeholder: 'CVV',
+				onKeyPress: function (cep, e, field, options) {
+					var masks = ['000', '0000'],
+					mask = (flag == 0) ? masks[1] : masks[0];
+					cvv.mask(mask, options);
+				}
 			});
 			cvv.on('focus', function () {
 				preview.addClass('is-active');
