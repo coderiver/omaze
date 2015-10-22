@@ -153,17 +153,24 @@ head.ready(function() {
 			amex        = $('.js-card-amex'),
 			discover    = $('.js-card-discover');
 		if (wrap.length) {
-			number.mask('0000 0000 0000 0000', {
+
+			var numberOptions =  {
 				placeholder: 'XXXX XXXX XXXX XXXX',
 				onComplete: function (cep) {
 					wrap.addClass('is-active');
-					numberShort.val(cep.substring(15));
+					numberShort.val(cep.substring(cep.length - 4));
 					date.focus();
 				},
 				onKeyPress: function (cep, e, field, options) {
-					getCreditCardType(cep);
+					var masks = ['0000 0000 0000 0000', '0000 000000 00000'],
+						type = getCreditCardType(cep);
+					mask = (type == 'amex') ? masks[1] : masks[0];
+					number.mask(mask, options);
 				}
-			});
+			};
+			number.mask('0000 0000 0000 0000', numberOptions);
+
+			// number
 			numberShort.on('focus', function () {
 				wrap.removeClass('is-active');
 				number.focus();
@@ -191,34 +198,24 @@ head.ready(function() {
 		};
 		function getCreditCardType (accountNumber){
 			//start without knowing the credit card type
-			item.removeClass('is-active');
+			var result = 'unknown';
 			//first check for MasterCard
 			if (/^5[1-5]/.test(accountNumber)) {
-				item.removeClass('is-active');
-				mastercard.addClass('is-active');
+				result = 'mastercard';
 			}
 			//then check for Visa
 			else if (/^4/.test(accountNumber)) {
-				item.removeClass('is-active');
-				visa.addClass('is-active');
+				result = 'visa';
 			}
 			//then check for AmEx
 			else if (/^3[47]/.test(accountNumber)) {
-				item.removeClass('is-active');
-				amex.addClass('is-active');
-				number.mask('0000 0000 0000 000', {
-					onComplete: function (cep) {
-						wrap.addClass('is-active');
-						numberShort.val(cep.substring(15));
-						date.focus();
-					}
-				});
+				result = 'amex';
 			}
 			//then check for Discover
 			else if (/^(6011|622(12[6-9]|1[3-9][0-9]|[2-8][0-9]{2}|9[0-1][0-9]|92[0-5]|64[4-9])|65)/.test(accountNumber)) {
-				item.removeClass('is-active');
-				discover.addClass('is-active');
+				result = 'discover';
 			}
+			return result;
 		}
 	}());
 

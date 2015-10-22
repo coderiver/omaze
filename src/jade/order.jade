@@ -13,13 +13,29 @@ html
 				//- center
 				.popup__center.center
 					.popup__in
-						.popup__aside
-							//- back
-							.back
-								a.back__link(href="#")
-									i.icon.icon-arrow-back
-									span.back__title Back to campaign
-						.popup__row.js-product
+						.popup__row
+							.popup__aside
+								//- back
+								.back
+									a.back__link(href="#")
+										i.icon.icon-arrow-back
+										span.back__title Back to campaign
+								//- campaign
+								.campaign.campaign_order
+									.campaign__info
+										.campaign__author Arnold Schwarzenegger’s
+										.campaign__title Official Selfie Stick T-shirt
+										.campaign__title-sub Benefiting After-School All-Stars
+							.popup__section
+								//- back
+								.back.back_order
+									a.back__link(href="#")
+										i.icon.icon-arrow-back
+										span.back__title Back to campaign
+								//- form
+								.form
+									.form__title ORDER SUMMARY:
+						.popup__row.popup__row_product.js-product
 							.popup__aside
 								//- order
 								.order.order_single
@@ -82,7 +98,7 @@ html
 													input.option__input(type="radio", name="opt2")
 													span.option__var 
 														span.option__size XXL
-						.popup__row.js-product
+						.popup__row.popup__row_product.js-product
 							.popup__aside
 								//- order
 								.order.order_single
@@ -146,6 +162,9 @@ html
 													span.option__var 
 														span.option__size XXL
 						.popup__section
+							//- add-style
+							.add-style
+								a.add-style__link(href="#") + Add another style or color
 							//- order
 							.order.order_form
 								.order__stats
@@ -175,7 +194,6 @@ html
 												i.icon.icon-lock
 											.secure__title Payments are secured with 128-bit encryption
 										.secure__text By continuing, you agree to our
-										.secure__terms
-											a.secure__terms-link(href="#") Purchaser Terms & Conditions
+										.secure__terms Purchaser Terms & Conditions
 		//- scripts
 		script(src='js/lib/head.js', data-headjs-load='js/init.js')

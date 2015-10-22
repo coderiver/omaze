@@ -131,9 +131,23 @@ html
 															input.card__input.input.js-card-cvv(type="text")
 										.card__edit Enter card number for expiration date and CVV
 								.form__foot
-									button.form__btn.btn(disabled) CONFIRM ORDER
-									button.form__btn.btn PAY $36 + $4 SHIPPING
+									.form__row.form__row_invert
+										.form__col
+											button.form__btn.btn(disabled) CONFIRM ORDER
+											button.form__btn.btn PAY $36 + $4 SHIPPING
+										.form__col
+											//- go-back
+											a.go-back(href="#")
+												.go-back__icon
+													i.icon.icon-arrow-back-sm
+												.go-back__title Edit Your Order
 						.popup__aside
+							//- campaign
+							.campaign
+								.campaign__info
+									.campaign__author Arnold Schwarzenegger’s
+									.campaign__title Official Selfie Stick T-shirt
+									.campaign__title-sub Benefiting After-School All-Stars
 							//- order
 							.order
 								.order__title ORDER SUMMARY:

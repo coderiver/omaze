@@ -297,7 +297,7 @@ a
 		font-size: 22px
 		+rm(719)
 			font-size: 30px
-		
+
 .price
 	margin-bottom: 20px
 	font-size: 35px
@@ -553,15 +553,13 @@ a
 	&_sm &__title
 		margin-bottom: 5px
 	&_sm &__pic
-		+rm(1023)
-			width: 42px
-			height: 42px
+		width: 42px
+		height: 42px
 	&_sm &__size
-		+rm(1023)
-			width: 42px
-			height: 42px
-			line-height: 40px
-			font-size: 18px
+		width: 42px
+		height: 42px
+		line-height: 40px
+		font-size: 18px
 		
 .select
 	position: relative
@@ -659,6 +657,9 @@ a
 		+rm(1023)
 			margin: 0 -10px
 			+clr
+	&__row_invert &__col
+		+rm(1023)
+			float: right
 	&__col
 		+rm(1023)
 			float: left
@@ -680,7 +681,7 @@ a
 	&_change
 		display: none
 		position: relative
-		margin: 0
+		margin: 0 0 20px
 		&.is-active
 			display: block
 		+r(718)
@@ -689,6 +690,7 @@ a
 			border-radius: 5px
 		+rm(719)
 			display: block
+			margin: 0
 			padding-right: 30px
 			&:after
 				content: ""
@@ -701,6 +703,9 @@ a
 			margin: 0
 	&_change &__fieldset
 		margin: 0
+		+rm(1023)
+			margin-left: -10px
+
 
 .field
 	margin-bottom: 5px
@@ -1327,6 +1332,8 @@ a
 
 .back
 	margin-bottom: 15px
+	+rm(719)
+		display: none
 	&__link,
 	&__title
 		display: inline-block
@@ -1339,10 +1346,33 @@ a
 		+lightitalic
 		font-size: 17px 
 		text-decoration: underline
+	&_order
+		display: none
+		+rm(719)
+			display: block
+			margin-bottom: 60px
 	.icon
 		margin-right: 5px
 		font-size: 10px
 		vertical-align: middle
+
+.go-back
+	display: none
+	padding: 15px 0
+	font-size: 0
+	&__icon, 
+	&__title
+		display: inline-block
+		vertical-align: middle
+	&__icon
+		margin-right: 4px
+		.icon
+			font-size: 14px 
+	&__title
+		+bold
+		font-size: 20px
+	+rm(767)
+		display: inline-block
 
 .popup
 	position: fixed
@@ -1391,6 +1421,17 @@ a
 	&__row
 		clear: both
 		+clr
+	&__row_product + &__row_product
+		+r(718)
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				top: -10px
+				left: 0
+				right: 0
+				height: 1px
+				background: rgba(#000,.2)
 	&__section,
 	&__aside
 		position: relative
@@ -1417,10 +1458,15 @@ a
 		margin-bottom: 2px
 		+bold
 		letter-spacing: 3px
+		+rm(719)
+			margin-bottom: 30px
+			text-align: center
 	&__title-sub
 		margin-bottom: 30px
 		+lightitalic
 		color: $pink
+		+rm(719)
+			display: none
 	&__item
 		position: relative
 		margin-bottom: 20px
@@ -1566,6 +1612,10 @@ a
 			font-size: 14px
 	&__title
 		font-size: 14px
+	&__text
+		color: $gray-dark 
+	&__terms
+		color: #000 
 		
 .campaigns
 	text-align: center
@@ -1592,6 +1642,29 @@ a
 			width: 33.33%
 	&__item
 		margin: 0 auto 
+
+.campaign
+	display: none
+	margin-bottom: 50px
+	text-align: center
+	+rm(719)
+		display: block
+	&__author
+		margin-bottom: 5px
+		+lightitalic
+		font-size: 16px
+		color: $gray-dark
+	&__title
+		margin-bottom: 5px
+		+extrabold
+		font-size: 26px
+		line-height: 1.1
+	&__title-sub
+		+lightitalic
+		font-size: 17px
+		color: $pink
+	&_order
+		margin: 0
 
 .how
 	&__title
@@ -1655,6 +1728,13 @@ a
 		+rm(719)
 			font-size: 18px
 
+.add-style
+	margin-bottom: 30px
+	font-size: 18px
+	&__link
+		color: #000
+		+rm(719)
+			color: $pink 
 
 
 

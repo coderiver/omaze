@@ -834,16 +834,14 @@ a {
     font-size: 22px; }
   .option_sm .option__title {
     margin-bottom: 5px; }
-  @media only screen and (min-width: 1023px) {
-    .option_sm .option__pic {
-      width: 42px;
-      height: 42px; } }
-  @media only screen and (min-width: 1023px) {
-    .option_sm .option__size {
-      width: 42px;
-      height: 42px;
-      line-height: 40px;
-      font-size: 18px; } }
+  .option_sm .option__pic {
+    width: 42px;
+    height: 42px; }
+  .option_sm .option__size {
+    width: 42px;
+    height: 42px;
+    line-height: 40px;
+    font-size: 18px; }
 
 .select {
   position: relative; }
@@ -965,6 +963,9 @@ a {
         display: table;
         clear: both; } }
   @media only screen and (min-width: 1023px) {
+    .form__row_invert .form__col {
+      float: right; } }
+  @media only screen and (min-width: 1023px) {
     .form__col {
       float: left;
       width: 50%;
@@ -986,7 +987,7 @@ a {
   .form_change {
     display: none;
     position: relative;
-    margin: 0; }
+    margin: 0 0 20px; }
     .form_change.is-active {
       display: block; }
     @media only screen and (max-width: 718px) {
@@ -997,6 +998,7 @@ a {
     @media only screen and (min-width: 719px) {
       .form_change {
         display: block;
+        margin: 0;
         padding-right: 30px; }
         .form_change:after {
           content: "";
@@ -1012,6 +1014,9 @@ a {
     margin: 0; }
   .form_change .form__fieldset {
     margin: 0; }
+    @media only screen and (min-width: 1023px) {
+      .form_change .form__fieldset {
+        margin-left: -10px; } }
 
 .field {
   margin-bottom: 5px; }
@@ -1724,6 +1729,9 @@ a {
 
 .back {
   margin-bottom: 15px; }
+  @media only screen and (min-width: 719px) {
+    .back {
+      display: none; } }
   .back__link,
   .back__title {
     display: inline-block;
@@ -1736,10 +1744,35 @@ a {
     font-family: "National-LightItalic", Arial, sans-serif;
     font-size: 17px;
     text-decoration: underline; }
+  .back_order {
+    display: none; }
+    @media only screen and (min-width: 719px) {
+      .back_order {
+        display: block;
+        margin-bottom: 60px; } }
   .back .icon {
     margin-right: 5px;
     font-size: 10px;
     vertical-align: middle; }
+
+.go-back {
+  display: none;
+  padding: 15px 0;
+  font-size: 0; }
+  .go-back__icon,
+  .go-back__title {
+    display: inline-block;
+    vertical-align: middle; }
+  .go-back__icon {
+    margin-right: 4px; }
+    .go-back__icon .icon {
+      font-size: 14px; }
+  .go-back__title {
+    font-family: "National-Bold", Arial, sans-serif;
+    font-size: 20px; }
+  @media only screen and (min-width: 767px) {
+    .go-back {
+      display: inline-block; } }
 
 .popup {
   position: fixed;
@@ -1799,6 +1832,17 @@ a {
       content: " ";
       display: table;
       clear: both; }
+  @media only screen and (max-width: 718px) {
+    .popup__row_product + .popup__row_product {
+      position: relative; }
+      .popup__row_product + .popup__row_product:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.2); } }
   .popup__section,
   .popup__aside {
     position: relative;
@@ -1829,10 +1873,17 @@ a {
     margin-bottom: 2px;
     font-family: "National-Bold", Arial, sans-serif;
     letter-spacing: 3px; }
+    @media only screen and (min-width: 719px) {
+      .order__title {
+        margin-bottom: 30px;
+        text-align: center; } }
   .order__title-sub {
     margin-bottom: 30px;
     font-family: "National-LightItalic", Arial, sans-serif;
     color: #EE4288; }
+    @media only screen and (min-width: 719px) {
+      .order__title-sub {
+        display: none; } }
   .order__item {
     position: relative;
     margin-bottom: 20px;
@@ -1991,6 +2042,10 @@ a {
       font-size: 14px; }
   .secure__title {
     font-size: 14px; }
+  .secure__text {
+    color: #939598; }
+  .secure__terms {
+    color: #000; }
 
 .campaigns {
   text-align: center; }
@@ -2020,6 +2075,30 @@ a {
         width: 33.33%; } }
   .campaigns__item {
     margin: 0 auto; }
+
+.campaign {
+  display: none;
+  margin-bottom: 50px;
+  text-align: center; }
+  @media only screen and (min-width: 719px) {
+    .campaign {
+      display: block; } }
+  .campaign__author {
+    margin-bottom: 5px;
+    font-family: "National-LightItalic", Arial, sans-serif;
+    font-size: 16px;
+    color: #939598; }
+  .campaign__title {
+    margin-bottom: 5px;
+    font-family: "National-Extrabold", Arial, sans-serif;
+    font-size: 26px;
+    line-height: 1.1; }
+  .campaign__title-sub {
+    font-family: "National-LightItalic", Arial, sans-serif;
+    font-size: 17px;
+    color: #EE4288; }
+  .campaign_order {
+    margin: 0; }
 
 .how__title {
   margin-bottom: 20px;
@@ -2107,5 +2186,14 @@ a {
   @media only screen and (min-width: 719px) {
     .how__text {
       font-size: 18px; } }
+
+.add-style {
+  margin-bottom: 30px;
+  font-size: 18px; }
+  .add-style__link {
+    color: #000; }
+    @media only screen and (min-width: 719px) {
+      .add-style__link {
+        color: #EE4288; } }
 
 /*# sourceMappingURL=screen.css.map */
