@@ -1,0 +1,13 @@
+{
+  "undef": true,
+  "unused": true,
+  "browser": true,
+  "devel": true,
+  "predef": [
+    "define",
+    "_",
+    "tinyMCE",
+    "app",
+    "escape"
+  ]
+}
