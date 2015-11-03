@@ -71,7 +71,7 @@
 					"international_add": 300
 				}
 			},
-			"sizing_chart": "s3.amazon.com/omaze/sizing.jpg",
+			"sizing_chart": "assets/images/sizes.jpg",
 			"description": "<ul><li>Product Detail #1</li><li>Product Detail #2</li></ul>",
 			"images": [{
 				"filename": "file1.jpg",
@@ -93,12 +93,12 @@
 				}],
 				"sizes": [{
 					"id": 10003,
-					"title": "S",
-					"value": "small"
+					"title": "small",
+					"value": "S"
 				}, {
 					"id": 10004,
-					"title": "L",
-					"value": "large"
+					"title": "large",
+					"value": "L"
 				}]
 			}
 		}, {
@@ -115,7 +115,7 @@
 					"international_add": 300
 				}
 			},
-			"sizing_chart": "s3.amazon.com/omaze/sizing.jpg",
+			"sizing_chart": "assets/images/sizes.jpg",
 			"description": "<ul><li>Product Detail #1</li><li>Product Detail #2</li></ul>",
 			"images": [{
 				"filename": "file1.jpg",
@@ -137,12 +137,12 @@
 				}],
 				"sizes": [{
 					"id": 10003,
-					"title": "S",
-					"value": "small"
+					"title": "small",
+					"value": "S"
 				}, {
 					"id": 10004,
-					"title": "L",
-					"value": "large"
+					"title": "large",
+					"value": "L"
 				}]
 			}
 		}]
