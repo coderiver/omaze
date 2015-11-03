@@ -119,51 +119,8 @@
 			}, {
 				"filename": "file3.jpg"
 			}],
-			"price": 2600,
+			"price": 2000,
 			"attributes": [{
-				"attribute_id": 10002,
-				"type": "color",
-				"subtype": "blue"
-			}, {
-				"attribute_id": 10003,
-				"type": "color",
-				"subtype": "red"
-			}, {
-				"attribute_id": 20002,
-				"type": "size",
-				"subtype": "small"
-			}, {
-				"attribute_id": 20003,
-				"type": "size",
-				"subtype": "large"
-			}]
-		}]
-	},{
-		"id": 101,
-		"products": [{
-			"id": 100000,
-			"template": {
-				"size_chart": "s3.amazon.com/omaze/sizing.jpg",
-				"shipping_costs": {
-					"us": 400,
-					"us_add": 200,
-					"canada": 450,
-					"canada_add": 250,
-					"international": 500,
-					"international_add": 300
-				}
-			},
-			"sizing_chart": "s3.amazon.com/omaze/sizing.jpg",
-			"description": "<ul><li>Product Detail #1</li><li>Product Detail #2</li></ul>",
-			"images": [{
-				"filename": "file1.jpg",
-				"weight": 1,
-				"tags": ["primary", "gray"]
-			}, {
-				"filename": "file3.jpg"
-			}],
-			"price": 2500,
-			"attributes" : [{
 				"attribute_id": 10002,
 				"type": "color",
 				"subtype": "blue"

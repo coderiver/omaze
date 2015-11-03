@@ -46,31 +46,37 @@
             <div class="field">
               <div class="field__wrap">
                 <div class="select">
-                  <div class="select__head">Men’s T-Shirt - $18</div>
+                  <div class="select__head">-</div>
                   <select class="select__el js-select">
                     {{#each bundles}}
-                      <option>Men’s T-Shirt - $18</option>
-                      <option>Men’s T-Shirt - $19</option>
-                      <option>Men’s T-Shirt - $20</option>
+                      {{#each products}}
+                        <option>Men’s T-Shirt - {{price}}$</option>
+                      {{/each}}
                     {{/each}}
                   </select>
                 </div>
               </div>
             </div>
           </div>
+          {{#each bundles}}
+            {{#each products}}
+              {{#each attributes}}
+                <div class="option">
+                  <div class="option__title">COLOR<span class="option__selected">- Heather Grey</span></div>
+                  <div class="option__list">
+                    <label class="option__item">
+                      <input type="radio" name="opt1" checked="" class="option__input"><span class="option__var"> <img src="assets/images/texture.jpg" alt="" class="option__pic"></span>
+                    </label>
+                    <label class="option__item">
+                      <input type="radio" name="opt1" class="option__input"><span class="option__var"> <img src="assets/images/texture.jpg" alt="" class="option__pic"></span>
+                    </label>
+                  </div>
+                </div>
+              {{/each}}
+            {{/each}}
+          {{/each}}
           
           
-          <div class="option">
-            <div class="option__title">COLOR<span class="option__selected">- Heather Grey</span></div>
-            <div class="option__list">
-              <label class="option__item">
-                <input type="radio" name="opt1" checked class="option__input"><span class="option__var"> <img src="assets/images/texture.jpg" alt="" class="option__pic"></span>
-              </label>
-              <label class="option__item">
-                <input type="radio" name="opt1" class="option__input"><span class="option__var"> <img src="assets/images/texture.jpg" alt="" class="option__pic"></span>
-              </label>
-            </div>
-          </div>
           <div class="option">
             <div class="option__title">size<span class="option__selected">- Large</span></div>
             <div class="option__list">
