@@ -48,14 +48,18 @@
                 <div class="select">
                   <div class="select__head">Men’s T-Shirt - $18</div>
                   <select class="select__el js-select">
-                    <option>Men’s T-Shirt - $18</option>
-                    <option>Men’s T-Shirt - $19</option>
-                    <option>Men’s T-Shirt - $20</option>
+                    {{#each bundles}}
+                      <option>Men’s T-Shirt - $18</option>
+                      <option>Men’s T-Shirt - $19</option>
+                      <option>Men’s T-Shirt - $20</option>
+                    {{/each}}
                   </select>
                 </div>
               </div>
             </div>
           </div>
+          
+          
           <div class="option">
             <div class="option__title">COLOR<span class="option__selected">- Heather Grey</span></div>
             <div class="option__list">

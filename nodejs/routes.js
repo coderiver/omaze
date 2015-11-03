@@ -6,7 +6,7 @@ module.exports = function(app){
         res.render('index');
     });
     app.get('/campaign', function(req, res) {
-    	var data = fs.readFile('data/campaign.json', 'utf8', function(err, data) {
+    	var data = fs.readFile('data/full.json', 'utf8', function(err, data) {
     		if (err) throw err;
 	        res.render('campaign', JSON.parse(data));
     	});
