@@ -59,6 +59,7 @@
 		"id": 100,
 		"products": [{
 			"id": 100000,
+			"title": "Mens T-Shirt",
 			"template": {
 				"size_chart": "s3.amazon.com/omaze/sizing.jpg",
 				"shipping_costs": {
@@ -80,25 +81,29 @@
 				"filename": "file3.jpg"
 			}],
 			"price": 2500,
-			"attributes": [{
-				"attribute_id": 10002,
-				"type": "color",
-				"subtype": "blue"
-			}, {
-				"attribute_id": 10003,
-				"type": "color",
-				"subtype": "red"
-			}, {
-				"attribute_id": 20002,
-				"type": "size",
-				"subtype": "small"
-			}, {
-				"attribute_id": 20003,
-				"type": "size",
-				"subtype": "large"
-			}]
+			"attributes": {
+				"colors": [{
+					"id": 10001,
+					"title": "Dark red",
+					"value": "red"
+				}, {
+					"id": 10002,
+					"title": "Dark green",
+					"value": "green"
+				}],
+				"sizes": [{
+					"id": 10003,
+					"title": "S",
+					"value": "small"
+				}, {
+					"id": 10004,
+					"title": "L",
+					"value": "large"
+				}]
+			}
 		}, {
 			"id": 100001,
+			"title": "Women T-Shirt",
 			"template": {
 				"size_chart": "s3.amazon.com/omaze/sizing.jpg",
 				"shipping_costs": {
@@ -120,23 +125,26 @@
 				"filename": "file3.jpg"
 			}],
 			"price": 2000,
-			"attributes": [{
-				"attribute_id": 10002,
-				"type": "color",
-				"subtype": "blue"
-			}, {
-				"attribute_id": 10003,
-				"type": "color",
-				"subtype": "red"
-			}, {
-				"attribute_id": 20002,
-				"type": "size",
-				"subtype": "small"
-			}, {
-				"attribute_id": 20003,
-				"type": "size",
-				"subtype": "large"
-			}]
+			"attributes": {
+				"colors": [{
+					"id": 10001,
+					"title": "Dark red",
+					"value": "red"
+				}, {
+					"id": 10002,
+					"title": "Dark green",
+					"value": "green"
+				}],
+				"sizes": [{
+					"id": 10003,
+					"title": "S",
+					"value": "small"
+				}, {
+					"id": 10004,
+					"title": "L",
+					"value": "large"
+				}]
+			}
 		}]
 	}]
 }
