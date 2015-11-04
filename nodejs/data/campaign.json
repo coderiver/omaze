@@ -4,7 +4,7 @@
   "full_url": "omaze.com/made/arnold-selfie-stick",
   "short_url": "omaze.com/made/arnold",
   "celebrity_name": "Arnold Schwarzenegger",
-  "celebrity_image_url": "assets/images/arni.jpg",
+  "celebrity_image_url": "assets/img/arni.jpg",
   "celebrity_quote": "You will love this t-shirt! - \"Arnold Schwarzenegger\"",
   "charity": {
     "name": "After School All-Stars",
@@ -13,47 +13,47 @@
   },
   "images": [
     {
-      "filename": "assets/images/product.jpg",
+      "filename": "assets/img/product.jpg",
       "weight": 1,
       "tags": []
     },
     {
-      "filename": "assets/images/product.jpg",
+      "filename": "assets/img/product.jpg",
       "weight": 1,
       "tags": []
     },
     {
-      "filename": "assets/images/product.jpg",
+      "filename": "assets/img/product.jpg",
       "weight": 1,
       "tags": []
     },
     {
-      "filename": "assets/images/product.jpg",
+      "filename": "assets/img/product.jpg",
       "weight": 1,
       "tags": []
     },
     {
-      "filename": "assets/images/product.jpg",
+      "filename": "assets/img/product.jpg",
       "weight": 1,
       "tags": []
     },
     {
-      "filename": "assets/images/product.jpg",
+      "filename": "assets/img/product.jpg",
       "weight": 1,
       "tags": []
     },
     {
-      "filename": "assets/images/product.jpg",
+      "filename": "assets/img/product.jpg",
       "weight": 1,
       "tags": []
     },
     {
-      "filename": "assets/images/product.jpg",
+      "filename": "assets/img/product.jpg",
       "weight": 1,
       "tags": []
     },
     {
-      "filename": "assets/images/product.jpg",
+      "filename": "assets/img/product.jpg",
       "weight": 1,
       "tags": []
     }

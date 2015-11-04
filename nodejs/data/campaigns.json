@@ -1,0 +1,418 @@
+{
+  "campaings": [
+    {
+      "id": 99,
+      "title": "Official Selfie Stick T-Shirt",
+      "full_url": "omaze.com/made/arnold-selfie-stick",
+      "short_url": "omaze.com/made/arnold",
+      "celebrity_name": "Arnold Schwarzenegger",
+      "celebrity_image_url": "assets/img/arni.jpg",
+      "celebrity_quote": "You will love this t-shirt! - \"Arnold Schwarzenegger\"",
+      "charity": {
+        "name": "After School All-Stars",
+        "short_url": "omaze.com/charities/unicef",
+        "banner_url": "s3.amazon.com/omaze/1234.jpg"
+      },
+      "images": [
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        }
+      ],
+      "begin_date": 1456024937840,
+      "end_date": 1456824937840,
+      "campaign_goal": 1000,
+      "items_sold": 600,
+      "about": "<p>Founded in 1992, After School All-Stars is a... </p>",
+      "social_fb_template_headline": "<str>",
+      "social_fb_template_body": "<str>",
+      "bundles": []
+    },
+    {
+      "id": 99,
+      "title": "Official Selfie Stick T-Shirt 2",
+      "full_url": "omaze.com/made/arnold-selfie-stick",
+      "short_url": "omaze.com/made/arnold",
+      "celebrity_name": "Arnold Schwarzenegger",
+      "celebrity_image_url": "assets/img/arni.jpg",
+      "celebrity_quote": "You will love this t-shirt! - \"Arnold Schwarzenegger\"",
+      "charity": {
+        "name": "After School All-Stars",
+        "short_url": "omaze.com/charities/unicef",
+        "banner_url": "s3.amazon.com/omaze/1234.jpg"
+      },
+      "images": [
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        }
+      ],
+      "begin_date": 1456024937840,
+      "end_date": 1466124937840,
+      "campaign_goal": 1000,
+      "items_sold": 333,
+      "about": "<p>Founded in 1992, After School All-Stars is a... </p>",
+      "social_fb_template_headline": "<str>",
+      "social_fb_template_body": "<str>",
+      "bundles": []
+    },
+    {
+      "id": 99,
+      "title": "Official Selfie Stick T-Shirt 3",
+      "full_url": "omaze.com/made/arnold-selfie-stick",
+      "short_url": "omaze.com/made/arnold",
+      "celebrity_name": "Arnold Schwarzenegger",
+      "celebrity_image_url": "assets/img/arni.jpg",
+      "celebrity_quote": "You will love this t-shirt! - \"Arnold Schwarzenegger\"",
+      "charity": {
+        "name": "After School All-Stars",
+        "short_url": "omaze.com/charities/unicef",
+        "banner_url": "s3.amazon.com/omaze/1234.jpg"
+      },
+      "images": [
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        }
+      ],
+      "begin_date": 1456024937840,
+      "end_date": 1458124937840,
+      "campaign_goal": 1000,
+      "items_sold": 600,
+      "about": "<p>Founded in 1992, After School All-Stars is a... </p>",
+      "social_fb_template_headline": "<str>",
+      "social_fb_template_body": "<str>",
+      "bundles": []
+    },
+    {
+      "id": 99,
+      "title": "Official Selfie Stick T-Shirt 4",
+      "full_url": "omaze.com/made/arnold-selfie-stick",
+      "short_url": "omaze.com/made/arnold",
+      "celebrity_name": "Arnold Schwarzenegger",
+      "celebrity_image_url": "assets/img/arni.jpg",
+      "celebrity_quote": "You will love this t-shirt! - \"Arnold Schwarzenegger\"",
+      "charity": {
+        "name": "After School All-Stars",
+        "short_url": "omaze.com/charities/unicef",
+        "banner_url": "s3.amazon.com/omaze/1234.jpg"
+      },
+      "images": [
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        }
+      ],
+      "begin_date": 1456024937840,
+      "end_date": 1456155557840,
+      "campaign_goal": 1000,
+      "items_sold": 344,
+      "about": "<p>Founded in 1992, After School All-Stars is a... </p>",
+      "social_fb_template_headline": "<str>",
+      "social_fb_template_body": "<str>",
+      "bundles": []
+    },
+    {
+      "id": 99,
+      "title": "Official Selfie Stick T-Shirt 5",
+      "full_url": "omaze.com/made/arnold-selfie-stick",
+      "short_url": "omaze.com/made/arnold",
+      "celebrity_name": "Arnold Schwarzenegger",
+      "celebrity_image_url": "assets/img/arni.jpg",
+      "celebrity_quote": "You will love this t-shirt! - \"Arnold Schwarzenegger\"",
+      "charity": {
+        "name": "After School All-Stars",
+        "short_url": "omaze.com/charities/unicef",
+        "banner_url": "s3.amazon.com/omaze/1234.jpg"
+      },
+      "images": [
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        }
+      ],
+      "begin_date": 1456024937840,
+      "end_date": 1456124937840,
+      "campaign_goal": 1000,
+      "items_sold": 600,
+      "about": "<p>Founded in 1992, After School All-Stars is a... </p>",
+      "social_fb_template_headline": "<str>",
+      "social_fb_template_body": "<str>",
+      "bundles": []
+    },
+    {
+      "id": 99,
+      "title": "Official Selfie Stick T-Shirt 6",
+      "full_url": "omaze.com/made/arnold-selfie-stick",
+      "short_url": "omaze.com/made/arnold",
+      "celebrity_name": "Arnold Schwarzenegger",
+      "celebrity_image_url": "assets/img/arni.jpg",
+      "celebrity_quote": "You will love this t-shirt! - \"Arnold Schwarzenegger\"",
+      "charity": {
+        "name": "After School All-Stars",
+        "short_url": "omaze.com/charities/unicef",
+        "banner_url": "s3.amazon.com/omaze/1234.jpg"
+      },
+      "images": [
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        },
+        {
+          "filename": "assets/img/product.jpg",
+          "weight": 1,
+          "tags": []
+        }
+      ],
+      "begin_date": 1456024937840,
+      "end_date": 1456124937840,
+      "campaign_goal": 1000,
+      "items_sold": 999,
+      "about": "<p>Founded in 1992, After School All-Stars is a... </p>",
+      "social_fb_template_headline": "<str>",
+      "social_fb_template_body": "<str>",
+      "bundles": []
+    }
+  ]
+}

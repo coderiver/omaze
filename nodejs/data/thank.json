@@ -1,0 +1,118 @@
+{
+  "made_campaign": {
+    "id": 99,
+    "title": "Official Selfie Stick T-Shirt",
+    "full_url": "omaze.com/made/arnold-selfie-stick",
+    "short_url": "omaze.com/made/arnold",
+    "celebrity_name": "Arnold Schwarzenegger",
+    "celebrity_image_url": "assets/img/arni.jpg",
+    "celebrity_quote": "You will love this t-shirt! - \"Arnold Schwarzenegger\"",
+    "charity": {
+      "name": "After School All-Stars",
+      "short_url": "omaze.com/charities/unicef",
+      "banner_url": "s3.amazon.com/omaze/1234.jpg"
+    },
+    "images": [
+      {
+        "filename": "assets/img/product.jpg",
+        "weight": 1,
+        "tags": []
+      },
+      {
+        "filename": "assets/img/product.jpg",
+        "weight": 1,
+        "tags": []
+      },
+      {
+        "filename": "assets/img/product.jpg",
+        "weight": 1,
+        "tags": []
+      },
+      {
+        "filename": "assets/img/product.jpg",
+        "weight": 1,
+        "tags": []
+      },
+      {
+        "filename": "assets/img/product.jpg",
+        "weight": 1,
+        "tags": []
+      },
+      {
+        "filename": "assets/img/product.jpg",
+        "weight": 1,
+        "tags": []
+      },
+      {
+        "filename": "assets/img/product.jpg",
+        "weight": 1,
+        "tags": []
+      },
+      {
+        "filename": "assets/img/product.jpg",
+        "weight": 1,
+        "tags": []
+      },
+      {
+        "filename": "assets/img/product.jpg",
+        "weight": 1,
+        "tags": []
+      }
+    ],
+    "begin_date": 1456024937840,
+    "end_date": 1456124937840,
+    "campaign_goal": 1000,
+    "items_sold": 510,
+    "about": "<p>Founded in 1992, After School All-Stars is a... </p>",
+    "social_fb_template_headline": "<str>",
+    "social_fb_template_body": "<str>",
+    "bundles": []
+  },
+  "order": {
+    "order_id": 102020,
+    "tax_rate": 0.021,
+    "campaign_id": 99,
+    "first_name": "Morgan",
+    "last_name": "Furlong",
+    "email": "morgan@omaze.com",
+    "payment_gateway": "stripe",
+    "payment_info": {
+      "stripe_token": "tok_123412"
+    },
+    "shipping_address": {
+      "address1": "3530 Hayden Ave.",
+      "address2": "#B",
+      "city": "Culver City",
+      "state": "CA",
+      "postal_code": "90266"
+    },
+    "bundles": [
+      {
+        "bundle_id": 100,
+        "product_attributes": [
+          {
+            "attribute_id": 20002,
+            "value": true
+          },
+          {
+            "attribute_id": 10002,
+            "value": true
+          }
+        ]
+      },
+      {
+        "bundle_id": 101,
+        "product_attributes": [
+          {
+            "attribute_id": 20002,
+            "value": true
+          },
+          {
+            "attribute_id": 10003,
+            "value": true
+          }
+        ]
+      }
+    ]
+  }
+}

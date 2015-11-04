@@ -4,7 +4,7 @@
 	"full_url": "omaze.com/made/arnold-selfie-stick",
 	"short_url": "omaze.com/made/arnold",
 	"celebrity_name": "Arnold Schwarzenegger",
-	"celebrity_image_url": "assets/images/arni.jpg",
+	"celebrity_image_url": "assets/img/arni.jpg",
 	"celebrity_quote": "You will love this t-shirt! - \"Arnold Schwarzenegger\"",
 	"charity": {
 		"name": "After School All-Stars",
@@ -12,39 +12,39 @@
 		"banner_url": "s3.amazon.com/omaze/1234.jpg"
 	},
 	"images": [{
-		"filename": "assets/images/product.jpg",
+		"filename": "assets/img/product.jpg",
 		"weight": 1,
 		"tags": []
 	}, {
-		"filename": "assets/images/product.jpg",
+		"filename": "assets/img/product.jpg",
 		"weight": 1,
 		"tags": []
 	}, {
-		"filename": "assets/images/product.jpg",
+		"filename": "assets/img/product.jpg",
 		"weight": 1,
 		"tags": []
 	}, {
-		"filename": "assets/images/product.jpg",
+		"filename": "assets/img/product.jpg",
 		"weight": 1,
 		"tags": []
 	}, {
-		"filename": "assets/images/product.jpg",
+		"filename": "assets/img/product.jpg",
 		"weight": 1,
 		"tags": []
 	}, {
-		"filename": "assets/images/product.jpg",
+		"filename": "assets/img/product.jpg",
 		"weight": 1,
 		"tags": []
 	}, {
-		"filename": "assets/images/product.jpg",
+		"filename": "assets/img/product.jpg",
 		"weight": 1,
 		"tags": []
 	}, {
-		"filename": "assets/images/product.jpg",
+		"filename": "assets/img/product.jpg",
 		"weight": 1,
 		"tags": []
 	}, {
-		"filename": "assets/images/product.jpg",
+		"filename": "assets/img/product.jpg",
 		"weight": 1,
 		"tags": []
 	}],
@@ -71,7 +71,7 @@
 					"international_add": 300
 				}
 			},
-			"sizing_chart": "assets/images/sizes.jpg",
+			"sizing_chart": "assets/img/sizes.jpg",
 			"description": "<ul><li>Product Detail #1</li><li>Product Detail #2</li></ul>",
 			"images": [{
 				"filename": "file1.jpg",
@@ -119,7 +119,7 @@
 					"international_add": 300
 				}
 			},
-			"sizing_chart": "assets/images/sizes.jpg",
+			"sizing_chart": "assets/img/sizes.jpg",
 			"description": "<ul><li>Product Detail #1</li><li>Product Detail #2</li></ul>",
 			"images": [{
 				"filename": "file1.jpg",
