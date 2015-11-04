@@ -40,65 +40,69 @@
         <div class="product__content content">
           <p>“The design of this T-shirt is inspired by a video we created to promote my “Blow Sh** Up” campaign. This was launched to raise money for a cause very close to my heart.”</p>
         </div>
-        {{#each bundles}}
-          <div class="option">
-            <div class="option__title">STYLE</div>
-            <div class="field">
-              <div class="field__wrap">
-                <div class="select">
-                  <div class="select__head">{{products.0.title}} - {{products.0.price}}$</div>
-                  <select class="select__el js-select">
-                    {{#each products}}
-                      <option>{{title}} - {{price}}$</option>
-                    {{/each}}
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-          {{#each products}}
-            {{!-- color --}}
+        <div class="product__options">
+          {{#each bundles}}
             <div class="option">
-              <div class="option__title">COLOR<span class="option__selected">- Heather Grey</span></div>
-              <div class="option__list">
-                {{#each attributes.colors}}
-                  <label class="option__item">
-                    <input type="radio" name="{{id}}" class="option__input">
-                    <span class="option__var">
-                      <span class="option__size">{{value}}</span>
-                    </span>
-                  </label>
-                {{/each}}
-              </div>
-            </div>
-            {{!-- size --}}
-            <div class="option">
-              <div class="option__title">size<span class="option__selected">- Large</span></div>
-              <div class="option__list">
-                {{#each attributes.sizes}}
-                  <label class="option__item">
-                    <input type="radio" name="{{id}}" class="option__input">
-                    <span class="option__var">
-                      <span class="option__size">{{value}}</span>
-                    </span>
-                  </label>
-                {{/each}}
-              </div>
-            </div>
-            <div class="sizes">
-              <div class="sizes__head"><a href="#" class="sizes__link link js-sizes-link">Show sizing chart and product details</a>
-              </div>
-              <div class="sizes__wrap js-sizes">
-                <div class="sizes__list">
-                  {{{description}}}
-                </div>
-                <div class="sizes__table">
-                  <img src="{{sizing_chart}}" alt="" class="sizes__table-pic">
+              <div class="option__title">STYLE</div>
+              <div class="field">
+                <div class="field__wrap">
+                  <div class="select">
+                    <div class="select__head">{{products.0.title}} - {{products.0.price}}$</div>
+                    <select class="select__el js-select js-product-select">
+                      {{#each products}}
+                        <option>{{title}} - {{price}}$</option>
+                      {{/each}}
+                    </select>
+                  </div>
                 </div>
               </div>
+            </div>
+            <div class="product__options-wrap">
+              {{#each products}}
+                <div class="product__options-item js-product-item" {{#if @first}}style="display: block;"{{/if}}>
+                  <div class="option">
+                    <div class="option__title">COLOR<span class="option__selected" style="display: none;">- Heather Grey</span></div>
+                    <div class="option__list">
+                      {{#each attributes.colors}}
+                        <label class="option__item">
+                          <input type="radio" name="{{name}}" {{#if @first}}checked{{/if}} class="option__input">
+                          <span class="option__var">
+                            <span class="option__color" style="background: {{value}};"></span>
+                          </span>
+                        </label>
+                      {{/each}}
+                    </div>
+                  </div>
+                  <div class="option">
+                    <div class="option__title">size<span class="option__selected" style="display: none;">- Large</span></div>
+                    <div class="option__list">
+                      {{#each attributes.sizes}}
+                        <label class="option__item">
+                          <input type="radio" name="{{name}}" {{#if @first}}checked{{/if}} class="option__input">
+                          <span class="option__var">
+                            <span class="option__size">{{value}}</span>
+                          </span>
+                        </label>
+                      {{/each}}
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <div class="sizes__head"><a href="#" class="sizes__link link js-sizes-link">Show sizing chart and product details</a>
+                    </div>
+                    <div class="sizes__wrap js-sizes">
+                      <div class="sizes__content">
+                        {{{description}}}
+                      </div>
+                      <div class="sizes__table">
+                        <img src="{{sizing_chart}}" alt="" class="sizes__table-pic">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {{/each}}
             </div>
           {{/each}}
-        {{/each}}
+        </div>
         <button class="product__btn btn">BUY IT NOW</button>
         <div class="product__msg">Items ship 2 weeks after campaign closes</div>
       </div>

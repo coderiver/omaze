@@ -438,6 +438,8 @@ a
 			margin-bottom: 30px
 	&__options
 		margin-bottom: 30px
+		&-item
+			display: none
 	&__msg
 		+lightitalic
 		text-align: center
@@ -457,7 +459,7 @@ a
 	&__wrap
 		display: none
 		padding-top: 25px
-	&__list
+	&__content
 		margin-bottom: 25px
 	&__product
 		position: relative
@@ -540,11 +542,13 @@ a
 		width: 54px
 		height: 54px
 		border-radius: 50%
-	&__size
+	&__size,
+	&__color
 		display: block
 		width: 54px
 		height: 54px
 		border-radius: 50%
+	&__size
 		border: 1px solid $border
 		background: linear-gradient(#f0f0f1, #e3e4e5)
 		text-align: center

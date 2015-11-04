@@ -257,6 +257,13 @@ head.ready(function() {
 					var selected = _this.find('option:selected');
 					    text     = selected.text();
 					_this.prev().text(text);
+					// product
+					if (_this.hasClass('js-product-select')) {
+						var productItem = $('.js-product-item'),
+							index       = selected.index();
+						productItem.hide();
+						productItem.eq(index).show();
+					};
 				});
 			});
 		};
@@ -314,5 +321,18 @@ head.ready(function() {
 			});
 		};
 	}());
+
+	// progress
+	(function () {
+		var progress  = $('.js-progress'),
+			elPercent = progress.find('.js-progress-percent'),
+			elRange   = progress.find('.js-progress-range'),
+			valueSold = progress.find('.js-progress-sold').text(),
+			valueGoal = progress.find('.js-progress-goal').text(),
+			percent   = valueSold/valueGoal*100 + '%';
+		elRange.width(percent);
+		elPercent.text(percent);
+	}());
+
 	
 });

@@ -84,19 +84,23 @@
 			"attributes": {
 				"colors": [{
 					"id": 10001,
+					"name": "color-1",
 					"title": "Dark red",
 					"value": "red"
 				}, {
 					"id": 10002,
+					"name": "color-1",
 					"title": "Dark green",
 					"value": "green"
 				}],
 				"sizes": [{
 					"id": 10003,
+					"name": "size-1",
 					"title": "small",
 					"value": "S"
 				}, {
 					"id": 10004,
+					"name": "size-1",
 					"title": "large",
 					"value": "L"
 				}]
@@ -127,22 +131,31 @@
 			"price": 2000,
 			"attributes": {
 				"colors": [{
-					"id": 10001,
+					"id": 10005,
+					"name": "color-2",
 					"title": "Dark red",
-					"value": "red"
+					"value": "blue"
 				}, {
-					"id": 10002,
+					"id": 10006,
+					"name": "color-2",
 					"title": "Dark green",
-					"value": "green"
+					"value": "yellow"
 				}],
 				"sizes": [{
-					"id": 10003,
+					"id": 10007,
+					"name": "size-2",
 					"title": "small",
 					"value": "S"
 				}, {
-					"id": 10004,
+					"id": 10008,
+					"name": "size-2",
 					"title": "large",
 					"value": "L"
+				}, {
+					"id": 10009,
+					"name": "size-2",
+					"title": "extralarge",
+					"value": "XL"
 				}]
 			}
 		}]

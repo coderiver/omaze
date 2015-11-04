@@ -114,59 +114,96 @@ html
 											//- select
 											.select
 												.select__head Men’s T-Shirt - $18
-												select.select__el.js-select
+												select.select__el.js-select.js-product-select
 													option Men’s T-Shirt - $18
 													option Men’s T-Shirt - $19
-													option Men’s T-Shirt - $20
-								//- option
-								.option
-									.option__title COLOR
-										span.option__selected - Heather Grey
-									.option__list
-										label.option__item
-											input.option__input(type="radio", name="opt1", checked)
-											span.option__var 
-												img.option__pic(src="img/texture.jpg", alt="")
-										label.option__item
-											input.option__input(type="radio", name="opt1")
-											span.option__var 
-												img.option__pic(src="img/texture.jpg", alt="")
-								//- option
-								.option
-									.option__title size
-										span.option__selected - Large
-									.option__list
-										label.option__item
-											input.option__input(type="radio", name="opt2", checked)
-											span.option__var 
-												span.option__size S
-										label.option__item
-											input.option__input(type="radio", name="opt2",)
-											span.option__var 
-												span.option__size M
-										label.option__item
-											input.option__input(type="radio", name="opt2",)
-											span.option__var 
-												span.option__size L
-										label.option__item
-											input.option__input(type="radio", name="opt2",)
-											span.option__var 
-												span.option__size XL
-										label.option__item
-											input.option__input(type="radio", name="opt2",)
-											span.option__var 
-												span.option__size XXL
-							//- sizes
-							.sizes
-								.sizes__head
-									//- link
-									a.sizes__link.link.js-sizes-link(href="#") Show sizing chart and product details
-								.sizes__wrap.js-sizes
-									.sizes__list
-										.sizes__product Product Detail #1
-										.sizes__product Product Detail #2
-									.sizes__table
-										img.sizes__table-pic(src="img/sizes.jpg", alt="")
+								.product__options-wrap
+									.product__options-item.js-product-item(style="display: block;")
+										//- option
+										.option
+											.option__title COLOR
+												span.option__selected(style='display: none;') - Heather Grey
+											.option__list
+												label.option__item
+													input.option__input(type="radio", name="opt1", checked)
+													span.option__var 
+														span.option__color(style="background: red;")
+												label.option__item
+													input.option__input(type="radio", name="opt1")
+													span.option__var 
+														span.option__color(style="background: green;")
+										//- option
+										.option
+											.option__title size
+												span.option__selected(style='display: none;') - Large
+											.option__list
+												label.option__item
+													input.option__input(type="radio", name="opt2", checked)
+													span.option__var 
+														span.option__size S
+												label.option__item
+													input.option__input(type="radio", name="opt2",)
+													span.option__var 
+														span.option__size M
+												label.option__item
+													input.option__input(type="radio", name="opt2",)
+													span.option__var 
+														span.option__size L
+												label.option__item
+													input.option__input(type="radio", name="opt2",)
+													span.option__var 
+														span.option__size XL
+												label.option__item
+													input.option__input(type="radio", name="opt2",)
+													span.option__var 
+														span.option__size XXL
+										//- sizes
+										.sizes
+											.sizes__head
+												//- link
+												a.sizes__link.link.js-sizes-link(href="#") Show sizing chart and product details
+											.sizes__wrap.js-sizes
+												.sizes__content
+													ul
+														li Product Detail #1
+														li Product Detail #2
+												.sizes__table
+													img.sizes__table-pic(src="img/sizes.jpg", alt="")
+									.product__options-item.js-product-item
+										//- option
+										.option
+											.option__title COLOR
+												span.option__selected(style='display: none;') - Heather Grey
+											.option__list
+												label.option__item
+													input.option__input(type="radio", name="opt3", checked)
+													span.option__var 
+														span.option__color(style="background: red;")
+										//- option
+										.option
+											.option__title size
+												span.option__selected(style='display: none;') - Large
+											.option__list
+												label.option__item
+													input.option__input(type="radio", name="opt4", checked)
+													span.option__var 
+														span.option__size S
+												label.option__item
+													input.option__input(type="radio", name="opt4",)
+													span.option__var 
+														span.option__size M
+										//- sizes
+										.sizes
+											.sizes__head
+												//- link
+												a.sizes__link.link.js-sizes-link(href="#") Show sizing chart and product details
+											.sizes__wrap.js-sizes
+												.sizes__content
+													ul
+														li Product Detail #1
+														li Product Detail #2
+												.sizes__table
+													img.sizes__table-pic(src="img/sizes.jpg", alt="")
 							//- btn
 							button.product__btn.btn BUY IT NOW
 							.product__msg Items ship 2 weeks after campaign closes

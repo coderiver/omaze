@@ -713,6 +713,8 @@ a {
         margin-bottom: 30px; } }
   .product__options {
     margin-bottom: 30px; }
+    .product__options-item {
+      display: none; }
   .product__msg {
     font-family: "National-LightItalic", Arial, sans-serif;
     text-align: center; }
@@ -732,7 +734,7 @@ a {
   .sizes__wrap {
     display: none;
     padding-top: 25px; }
-  .sizes__list {
+  .sizes__content {
     margin-bottom: 25px; }
   .sizes__product {
     position: relative;
@@ -817,11 +819,12 @@ a {
     width: 54px;
     height: 54px;
     border-radius: 50%; }
-  .option__size {
+  .option__size, .option__color {
     display: block;
     width: 54px;
     height: 54px;
-    border-radius: 50%;
+    border-radius: 50%; }
+  .option__size {
     border: 1px solid #cccdd0;
     background: -webkit-linear-gradient(#f0f0f1, #e3e4e5);
     background: linear-gradient(#f0f0f1, #e3e4e5);
